@@ -15,7 +15,7 @@ module Register (
     assign Read_data_2 = (Read_register_2 == '0) ? '0 : Register[Read_register_2];
 
     always @(posedge clk) begin
-        if (RegWrite || (Write_register != '0)) begin
+        if (RegWrite && (Write_register != '0)) begin
             Register[Write_register] <= Write_data;
         end
     end
