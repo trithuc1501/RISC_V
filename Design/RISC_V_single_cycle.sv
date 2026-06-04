@@ -1,21 +1,33 @@
 import pkg::*;
 
+`include "ALU_control.sv"
+`include "ALU.sv"
+`include "Control.sv"
+`include "ImmGen.sv"
+`include "PC.sv"
+`include "Register.sv"
+`include "IMEM.sv"
+`include "DMEM.sv"
+`include "Mux_WB.sv"
+
 module RISC_V_single_cycle (
     input logic clk,
     input logic rst_n
 );
     logic [63:0] Address;
     logic [31:0] Instruction;
-    logic [7:0] Control_Signals;
+    logic [10:0] Control_Signals;
     logic [63:0] ImmExt;
 
     logic [63:0] Read_data_1;
     logic [63:0] Read_data_2;
+    logic [63:0] WriteBack_data;
     ALU_e ALUctl;
 
-    logic [63:0] Result;
+    logic [63:0] ALU_Result;
     logic Zero;
     logic Overflow;
+    logic Sign;
     logic CarryOut;
 
     logic [63:0] Read_data;
@@ -24,8 +36,16 @@ module RISC_V_single_cycle (
         .clk(clk),
         .rst_n(rst_n),
         .Zero(Zero),
+        .Sign(Sign),
+        .CarryOut(CarryOut),
+        .Overflow(Overflow),
+        .Jump(Control_Signals[9]),
+        .JALSrc(Control_Signals[10]),
         .Branch(Control_Signals[2]),
+        .Funct3(Instruction[14:12]),
         .Imm(ImmExt),
+        .Pre_Address(Address),
+        .ALU_Result(ALU_Result),
         .Address(Address)
     );
 
@@ -36,12 +56,11 @@ module RISC_V_single_cycle (
 
     Register Register_top (
         .clk(clk),
-        .rst_n(rst_n),
 
         .Read_register_1(Instruction[19:15]),
         .Read_register_2(Instruction[24:20]),
         .Write_register(Instruction[11:7]),
-        .Write_data(Control_Signals[6] ? Read_data : Result),
+        .Write_data(WriteBack_data),
         .RegWrite(Control_Signals[5]),
         .Read_data_1(Read_data_1),
         .Read_data_2(Read_data_2)
@@ -59,25 +78,27 @@ module RISC_V_single_cycle (
 
     ALU_control ALU_control_top (
         .ALUOp(Control_Signals[1:0]),
+        .Opcode5(Instruction[5]),
         .Funct7(Instruction[30]),
         .Funct3(Instruction[14:12]),
         .ALUctl(ALUctl)
     );
 
     ALU ALU_top (
-        .A(Read_data_1),
-        .B(Control_Signals[7] ? ImmExt : Read_data_2),
+        .SrcA(Read_data_1),
+        .SrcB(Control_Signals[8] ? ImmExt : Read_data_2),
         .ALUctl(ALUctl),
 
-        .Result(Result),
+        .Result(ALU_Result),
         .CarryOut(CarryOut),
         .Zero(Zero),
-        .Overflow(Overflow)
+        .Overflow(Overflow),
+        .Sign(Sign)
     );
 
     DMEM DMEM_top (
         .clk(clk),
-        .Address(Result),
+        .Address(ALU_Result),
         .Write_data(Read_data_2),
 
         .MemWrite(Control_Signals[3]),
@@ -86,6 +107,12 @@ module RISC_V_single_cycle (
         .Read_data(Read_data)
     );
 
+    Mux_WB Mux_WB_top (
+        .In0(ALU_Result),
+        .In1(Read_data),
+        .In2(Address + 64'd4),
+        .Sel(Control_Signals[7:6]),
+        .Out(WriteBack_data)
+    );
 
-    
 endmodule

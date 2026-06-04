@@ -9,6 +9,7 @@ module Register (
     output logic [63:0] Read_data_1,
     output logic [63:0] Read_data_2        
 );
+
     logic [63:0] Register [31:0]; 
 
     assign Read_data_1 = (Read_register_1 == '0) ? '0 : Register[Read_register_1];
@@ -19,4 +20,5 @@ module Register (
             Register[Write_register] <= Write_data;
         end
     end
+
 endmodule
