@@ -6,7 +6,7 @@ package pkg;
         blt = 3'b100,
         bge = 3'b101,
         bltu = 3'b110,
-        bgeu = 3'b111,
+        bgeu = 3'b111
     } Function_3_B_type_e;
 
     typedef enum logic [3:0] { 
