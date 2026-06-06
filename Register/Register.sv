@@ -12,10 +12,13 @@ module Register (
 
     logic [63:0] Register [31:0]; 
 
-    assign Read_data_1 = (Read_register_1 == '0) ? '0 : Register[Read_register_1];
-    assign Read_data_2 = (Read_register_2 == '0) ? '0 : Register[Read_register_2];
+    assign Read_data_1 = (Read_register_1 == '0) ? '0 : 
+                         ((RegWrite && (Write_register == Read_register_1)) ? Write_data : Register[Read_register_1]);
+                         
+    assign Read_data_2 = (Read_register_2 == '0) ? '0 : 
+                         ((RegWrite && (Write_register == Read_register_2)) ? Write_data : Register[Read_register_2]);
 
-    always @(posedge clk) begin
+    always_ff @(posedge clk) begin
         if (RegWrite && (Write_register != '0)) begin
             Register[Write_register] <= Write_data;
         end
