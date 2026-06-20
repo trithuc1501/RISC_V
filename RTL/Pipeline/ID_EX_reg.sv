@@ -13,7 +13,7 @@ module ID_EX_reg (
     input logic [63:0] ID_Read_data_1,
     input logic [63:0] ID_Read_data_2,
     input logic [63:0] ID_ImmExt,
-    input logic [9:0] ID_Control_signals,
+    input logic [10:0] ID_Control_signals,
 
     output logic [63:0] EX_PC,
     output logic [31:0] EX_Instruction,
@@ -23,7 +23,7 @@ module ID_EX_reg (
     output logic [63:0] EX_Read_data_1,
     output logic [63:0] EX_Read_data_2,
     output logic [63:0] EX_ImmExt,
-    output logic [9:0] EX_Control_signals
+    output logic [10:0] EX_Control_signals
     
 );
 

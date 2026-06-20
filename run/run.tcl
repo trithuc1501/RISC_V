@@ -6,16 +6,20 @@ if {[file exists work]} {
 vlib work
 vmap work work
 
-vlog -sv Design/*.sv
+vlog -sv RTL/Design/pkg.sv
 
-vsim -voptargs=+acc work.Test_Bench/RISC_V_pipe_line_tb
+vlog -sv RTL/*/*.sv
 
-add wave -position insertpoint sim:/Test_Bench/RISC_V_pipe_line_tb/dut/*
+vlog -sv Test_Bench/*.sv
 
-add wave -divider "--- Testbench Monitors ---"
-add wave -position insertpoint sim:/Test_Bench/RISC_V_pipe_line_tb/clk
-add wave -position insertpoint sim:/Test_Bench/RISC_V_pipe_line_tb/rst_n
-add wave -position insertpoint -radix decimal sim:/Test_Bench/RISC_V_pipe_line_tb/final_result
+vsim -voptargs=+acc work.RISC_V_pipe_line_tb
+
+add wave -position insertpoint sim:RISC_V_pipe_line_tb/dut/*
+
+add wave -divider {=== Testbench Monitors ===}
+add wave -position insertpoint sim:RISC_V_pipe_line_tb/clk
+add wave -position insertpoint sim:RISC_V_pipe_line_tb/rst_n
+add wave -position insertpoint -radix decimal sim:RISC_V_pipe_line_tb/final_result
 
 view structure
 view signals

@@ -18,33 +18,638 @@
 # ** Note: (vmap-220) 'modelsim.ini' is used as the ini file.
 # Modifying modelsim.ini
 # Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
-# Start time: 19:11:37 on Jun 20,2026
-# vlog -reportprogress 300 -sv Design/RISC_V_pipe_line.sv Design/RISC_V_single_cycle.sv Design/pkg.sv 
+# Start time: 19:42:39 on Jun 20,2026
+# vlog -reportprogress 300 -sv RTL/Design/pkg.sv 
 # ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
-# ** Error: Design/RISC_V_pipe_line.sv(1): (vlog-13006) Could not find the package (pkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
-# ** Error: Design/RISC_V_single_cycle.sv(1): (vlog-13006) Could not find the package (pkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
-# ** Error: Design/RISC_V_single_cycle.sv(3): Cannot find `include file "ALU_control.sv" in directories:
-#     /home/trithuc/altera_lite/25.1std/questa_fse/ovm-2.1.2/../verilog_src/ovm-2.1.2/src, /home/trithuc/altera_lite/25.1std/questa_fse/uvm-1.1d/../verilog_src/uvm-1.1d/src
-# ** Error: Design/RISC_V_single_cycle.sv(4): Cannot find `include file "ALU.sv" in directories:
-#     /home/trithuc/altera_lite/25.1std/questa_fse/ovm-2.1.2/../verilog_src/ovm-2.1.2/src, /home/trithuc/altera_lite/25.1std/questa_fse/uvm-1.1d/../verilog_src/uvm-1.1d/src
-# ** Error: Design/RISC_V_single_cycle.sv(5): Cannot find `include file "Control.sv" in directories:
-#     /home/trithuc/altera_lite/25.1std/questa_fse/ovm-2.1.2/../verilog_src/ovm-2.1.2/src, /home/trithuc/altera_lite/25.1std/questa_fse/uvm-1.1d/../verilog_src/uvm-1.1d/src
-# ** Error: Design/RISC_V_single_cycle.sv(6): Cannot find `include file "ImmGen.sv" in directories:
-#     /home/trithuc/altera_lite/25.1std/questa_fse/ovm-2.1.2/../verilog_src/ovm-2.1.2/src, /home/trithuc/altera_lite/25.1std/questa_fse/uvm-1.1d/../verilog_src/uvm-1.1d/src
-# ** Error: Design/RISC_V_single_cycle.sv(7): Cannot find `include file "PC.sv" in directories:
-#     /home/trithuc/altera_lite/25.1std/questa_fse/ovm-2.1.2/../verilog_src/ovm-2.1.2/src, /home/trithuc/altera_lite/25.1std/questa_fse/uvm-1.1d/../verilog_src/uvm-1.1d/src
-# ** Error: Design/RISC_V_single_cycle.sv(8): Cannot find `include file "Register.sv" in directories:
-#     /home/trithuc/altera_lite/25.1std/questa_fse/ovm-2.1.2/../verilog_src/ovm-2.1.2/src, /home/trithuc/altera_lite/25.1std/questa_fse/uvm-1.1d/../verilog_src/uvm-1.1d/src
-# ** Error: Design/RISC_V_single_cycle.sv(9): Cannot find `include file "IMEM.sv" in directories:
-#     /home/trithuc/altera_lite/25.1std/questa_fse/ovm-2.1.2/../verilog_src/ovm-2.1.2/src, /home/trithuc/altera_lite/25.1std/questa_fse/uvm-1.1d/../verilog_src/uvm-1.1d/src
-# ** Error: Design/RISC_V_single_cycle.sv(10): Cannot find `include file "DMEM.sv" in directories:
-#     /home/trithuc/altera_lite/25.1std/questa_fse/ovm-2.1.2/../verilog_src/ovm-2.1.2/src, /home/trithuc/altera_lite/25.1std/questa_fse/uvm-1.1d/../verilog_src/uvm-1.1d/src
-# ** Error: Design/RISC_V_single_cycle.sv(11): Cannot find `include file "Mux_WB.sv" in directories:
-#     /home/trithuc/altera_lite/25.1std/questa_fse/ovm-2.1.2/../verilog_src/ovm-2.1.2/src, /home/trithuc/altera_lite/25.1std/questa_fse/uvm-1.1d/../verilog_src/uvm-1.1d/src
-# End time: 19:11:37 on Jun 20,2026, Elapsed time: 0:00:00
-# Errors: 11, Warnings: 0
-# ** Error: /home/trithuc/altera_lite/25.1std/questa_fse/linux_x86_64/vlog failed.
-# Error in macro ./run/run.tcl line 9
-# /home/trithuc/altera_lite/25.1std/questa_fse/linux_x86_64/vlog failed.
-#     while executing
-# "vlog -sv Design/*.sv"
+# -- Compiling package pkg
+# 
+# Top level modules:
+# 	--none--
+# End time: 19:42:39 on Jun 20,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 19:42:39 on Jun 20,2026
+# vlog -reportprogress 300 -sv RTL/CtrlUnit/Control.sv RTL/Design/RISC_V_pipe_line.sv RTL/Design/pkg.sv RTL/ImmGen/ImmGen.sv RTL/MUX/MUX_2_1.sv RTL/MUX/Mux_WB.sv RTL/Memory/DMEM.sv RTL/Memory/IMEM.sv RTL/PC/PC.sv RTL/PC/PC_next.sv RTL/Pipeline/Branch_Target_Buffer.sv RTL/Pipeline/EX_MEM_reg.sv RTL/Pipeline/Forwarding_Unit.sv RTL/Pipeline/Hazard_Detection_Unit.sv RTL/Pipeline/ID_EX_reg.sv RTL/Pipeline/IF_ID_reg.sv RTL/Pipeline/MEM_WB_reg.sv RTL/Register/Register.sv RTL/design/ALU.sv RTL/design/ALU_control.sv 
+# ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
+# -- Compiling package Control_sv_unit
+# -- Importing package pkg
+# -- Compiling module Control
+# -- Compiling package RISC_V_pipe_line_sv_unit
+# -- Compiling module RISC_V_pipe_line
+# -- Compiling package pkg
+# -- Compiling package ImmGen_sv_unit
+# -- Compiling module ImmGen
+# -- Compiling module MUX_2_1
+# -- Compiling module Mux_WB
+# -- Compiling module DMEM
+# -- Compiling module IMEM
+# -- Compiling module PC
+# -- Compiling package PC_next_sv_unit
+# -- Compiling module PC_next
+# -- Compiling module Branch_Target_Buffer
+# -- Compiling module EX_MEM_reg
+# -- Compiling module Forwarding_Unit
+# -- Compiling module Hazard_Detection_Unit
+# -- Compiling module ID_EX_reg
+# -- Compiling module IF_ID_reg
+# -- Compiling module MEM_WB_reg
+# -- Compiling module Register
+# -- Compiling package ALU_sv_unit
+# -- Compiling module ALU
+# -- Compiling package ALU_control_sv_unit
+# -- Compiling module ALU_control
+# 
+# Top level modules:
+# 	RISC_V_pipe_line
+# 	Mux_WB
+# End time: 19:42:39 on Jun 20,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 19:42:39 on Jun 20,2026
+# vlog -reportprogress 300 -sv Test_Bench/RISC_V_pipe_line_tb.sv Test_Bench/RISC_V_pipe_line_tb1.sv Test_Bench/RISC_V_single_cycle_tb.sv 
+# ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
+# -- Compiling module RISC_V_pipe_line_tb
+# -- Compiling module RISC_V_pipe_line_tb1
+# -- Compiling module RISC_V_single_cycle_tb
+# 
+# Top level modules:
+# 	RISC_V_pipe_line_tb
+# 	RISC_V_pipe_line_tb1
+# 	RISC_V_single_cycle_tb
+# End time: 19:42:39 on Jun 20,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ** Note: (vsim-220) 'modelsim.ini' is used as the ini file.
+# vsim -voptargs="+acc" work.RISC_V_pipe_line_tb 
+# Start time: 19:42:39 on Jun 20,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vopt-220) 'modelsim.ini' is used as the ini file.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.RISC_V_pipe_line_tb(fast)
+# Loading work.pkg(fast)
+# Loading work.RISC_V_pipe_line_sv_unit(fast)
+# Loading work.RISC_V_pipe_line(fast)
+# Loading work.PC(fast)
+# Loading work.Branch_Target_Buffer(fast)
+# Loading work.IMEM(fast)
+# Loading work.IF_ID_reg(fast)
+# Loading work.Register(fast)
+# Loading work.ImmGen_sv_unit(fast)
+# Loading work.ImmGen(fast)
+# Loading work.Control_sv_unit(fast)
+# Loading work.Control(fast)
+# Loading work.ID_EX_reg(fast)
+# Loading work.MUX_2_1(fast)
+# Loading work.ALU_control_sv_unit(fast)
+# Loading work.ALU_control(fast)
+# Loading work.ALU_sv_unit(fast)
+# Loading work.ALU(fast)
+# Loading work.PC_next_sv_unit(fast)
+# Loading work.PC_next(fast)
+# Loading work.EX_MEM_reg(fast)
+# Loading work.DMEM(fast)
+# Loading work.MEM_WB_reg(fast)
+# Loading work.Hazard_Detection_Unit(fast)
+# Loading work.Forwarding_Unit(fast)
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# .main_pane.wave.interior.cs.body.pw.wf
+# =========================================================
+#            STARTING PIPELINE SIMULATION                  
+# =========================================================
+# 
+# Time=0 | PC=0 | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=50000 | PC=4 | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=70000 | PC=8 | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=90000 | PC=12 | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=110000 | PC=16 | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=130000 | PC=24 | a0(x10)=64 | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=150000 | PC=28 | a0(x10)=64 | a1(x11)=3 | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=170000 | PC=32 | a0(x10)=64 | a1(x11)=3 | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=12
+# Time=190000 | PC=36 | a0(x10)=64 | a1(x11)=3 | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=12
+# 
+# =======================================================
+#                   SELF-TEST RESULTS                      
+# =======================================================
+# Array sum at DMEM[0] = x (Expected = 60)
+# >>> STATUS: [ FAILED ] - Results mismatch! Check Hazards/Forwarding!
+# =======================================================
+# 
+# ** Note: $finish    : Test_Bench/RISC_V_pipe_line_tb.sv(63)
+#    Time: 210 ns  Iteration: 0  Instance: /RISC_V_pipe_line_tb
+# 1
+# Break in Module RISC_V_pipe_line_tb at Test_Bench/RISC_V_pipe_line_tb.sv line 63
+# 0 ps
+# 220500 ps
+quit -sim
+# End time: 19:43:32 on Jun 20,2026, Elapsed time: 0:00:53
+# Errors: 0, Warnings: 1
+quit -sim
+do run/run.tcl
+# Questa Altera Starter FPGA Edition-64 vmap 2025.2 Lib Mapping Utility 2025.05 May 31 2025
+# vmap work work 
+# ** Note: (vmap-220) 'modelsim.ini' is used as the ini file.
+# Modifying modelsim.ini
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 19:43:58 on Jun 20,2026
+# vlog -reportprogress 300 -sv RTL/Design/pkg.sv 
+# ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
+# -- Compiling package pkg
+# 
+# Top level modules:
+# 	--none--
+# End time: 19:43:58 on Jun 20,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 19:43:58 on Jun 20,2026
+# vlog -reportprogress 300 -sv RTL/CtrlUnit/Control.sv RTL/Design/RISC_V_pipe_line.sv RTL/Design/pkg.sv RTL/ImmGen/ImmGen.sv RTL/MUX/MUX_2_1.sv RTL/MUX/Mux_WB.sv RTL/Memory/DMEM.sv RTL/Memory/IMEM.sv RTL/PC/PC.sv RTL/PC/PC_next.sv RTL/Pipeline/Branch_Target_Buffer.sv RTL/Pipeline/EX_MEM_reg.sv RTL/Pipeline/Forwarding_Unit.sv RTL/Pipeline/Hazard_Detection_Unit.sv RTL/Pipeline/ID_EX_reg.sv RTL/Pipeline/IF_ID_reg.sv RTL/Pipeline/MEM_WB_reg.sv RTL/Register/Register.sv RTL/design/ALU.sv RTL/design/ALU_control.sv 
+# ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
+# -- Compiling package Control_sv_unit
+# -- Importing package pkg
+# -- Compiling module Control
+# -- Compiling package RISC_V_pipe_line_sv_unit
+# -- Compiling module RISC_V_pipe_line
+# -- Compiling package pkg
+# -- Compiling package ImmGen_sv_unit
+# -- Compiling module ImmGen
+# -- Compiling module MUX_2_1
+# -- Compiling module Mux_WB
+# -- Compiling module DMEM
+# -- Compiling module IMEM
+# -- Compiling module PC
+# -- Compiling package PC_next_sv_unit
+# -- Compiling module PC_next
+# -- Compiling module Branch_Target_Buffer
+# -- Compiling module EX_MEM_reg
+# -- Compiling module Forwarding_Unit
+# -- Compiling module Hazard_Detection_Unit
+# -- Compiling module ID_EX_reg
+# -- Compiling module IF_ID_reg
+# -- Compiling module MEM_WB_reg
+# -- Compiling module Register
+# -- Compiling package ALU_sv_unit
+# -- Compiling module ALU
+# -- Compiling package ALU_control_sv_unit
+# -- Compiling module ALU_control
+# 
+# Top level modules:
+# 	RISC_V_pipe_line
+# 	Mux_WB
+# End time: 19:43:58 on Jun 20,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 19:43:58 on Jun 20,2026
+# vlog -reportprogress 300 -sv Test_Bench/RISC_V_pipe_line_tb.sv Test_Bench/RISC_V_pipe_line_tb1.sv Test_Bench/RISC_V_single_cycle_tb.sv 
+# ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
+# -- Compiling module RISC_V_pipe_line_tb
+# -- Compiling module RISC_V_pipe_line_tb1
+# -- Compiling module RISC_V_single_cycle_tb
+# 
+# Top level modules:
+# 	RISC_V_pipe_line_tb
+# 	RISC_V_pipe_line_tb1
+# 	RISC_V_single_cycle_tb
+# End time: 19:43:58 on Jun 20,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ** Note: (vsim-220) 'modelsim.ini' is used as the ini file.
+# vsim -voptargs="+acc" work.RISC_V_pipe_line_tb 
+# Start time: 19:43:58 on Jun 20,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vopt-220) 'modelsim.ini' is used as the ini file.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.RISC_V_pipe_line_tb(fast)
+# Loading work.pkg(fast)
+# Loading work.RISC_V_pipe_line_sv_unit(fast)
+# Loading work.RISC_V_pipe_line(fast)
+# Loading work.PC(fast)
+# Loading work.Branch_Target_Buffer(fast)
+# Loading work.IMEM(fast)
+# Loading work.IF_ID_reg(fast)
+# Loading work.Register(fast)
+# Loading work.ImmGen_sv_unit(fast)
+# Loading work.ImmGen(fast)
+# Loading work.Control_sv_unit(fast)
+# Loading work.Control(fast)
+# Loading work.ID_EX_reg(fast)
+# Loading work.MUX_2_1(fast)
+# Loading work.ALU_control_sv_unit(fast)
+# Loading work.ALU_control(fast)
+# Loading work.ALU_sv_unit(fast)
+# Loading work.ALU(fast)
+# Loading work.PC_next_sv_unit(fast)
+# Loading work.PC_next(fast)
+# Loading work.EX_MEM_reg(fast)
+# Loading work.DMEM(fast)
+# Loading work.MEM_WB_reg(fast)
+# Loading work.Hazard_Detection_Unit(fast)
+# Loading work.Forwarding_Unit(fast)
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# .main_pane.wave.interior.cs.body.pw.wf
+# =========================================================
+#            STARTING PIPELINE SIMULATION                  
+# =========================================================
+# 
+# Time=0 | PC=0 | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=50000 | PC=4 | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=70000 | PC=8 | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=90000 | PC=12 | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=110000 | PC=16 | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=130000 | PC=24 | a0(x10)=64 | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=150000 | PC=28 | a0(x10)=64 | a1(x11)=3 | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=170000 | PC=32 | a0(x10)=64 | a1(x11)=3 | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=12
+# Time=190000 | PC=36 | a0(x10)=64 | a1(x11)=3 | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=12
+# 
+# =======================================================
+#                   SELF-TEST RESULTS                      
+# =======================================================
+# Array sum at DMEM[0] = x (Expected = 60)
+# >>> STATUS: [ FAILED ] - Results mismatch! Check Hazards/Forwarding!
+# =======================================================
+# 
+# ** Note: $finish    : Test_Bench/RISC_V_pipe_line_tb.sv(63)
+#    Time: 210 ns  Iteration: 0  Instance: /RISC_V_pipe_line_tb
+# 1
+# Break in Module RISC_V_pipe_line_tb at Test_Bench/RISC_V_pipe_line_tb.sv line 63
+# 0 ps
+# 220500 ps
+do run/run.tcl
+# End time: 19:45:05 on Jun 20,2026, Elapsed time: 0:01:07
+# Errors: 0, Warnings: 1
+# Questa Altera Starter FPGA Edition-64 vmap 2025.2 Lib Mapping Utility 2025.05 May 31 2025
+# vmap work work 
+# ** Note: (vmap-220) 'modelsim.ini' is used as the ini file.
+# Modifying modelsim.ini
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 19:45:05 on Jun 20,2026
+# vlog -reportprogress 300 -sv RTL/Design/pkg.sv 
+# ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
+# -- Compiling package pkg
+# 
+# Top level modules:
+# 	--none--
+# End time: 19:45:05 on Jun 20,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 19:45:05 on Jun 20,2026
+# vlog -reportprogress 300 -sv RTL/CtrlUnit/Control.sv RTL/Design/RISC_V_pipe_line.sv RTL/Design/pkg.sv RTL/ImmGen/ImmGen.sv RTL/MUX/MUX_2_1.sv RTL/MUX/Mux_WB.sv RTL/Memory/DMEM.sv RTL/Memory/IMEM.sv RTL/PC/PC.sv RTL/PC/PC_next.sv RTL/Pipeline/Branch_Target_Buffer.sv RTL/Pipeline/EX_MEM_reg.sv RTL/Pipeline/Forwarding_Unit.sv RTL/Pipeline/Hazard_Detection_Unit.sv RTL/Pipeline/ID_EX_reg.sv RTL/Pipeline/IF_ID_reg.sv RTL/Pipeline/MEM_WB_reg.sv RTL/Register/Register.sv RTL/design/ALU.sv RTL/design/ALU_control.sv 
+# ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
+# -- Compiling package Control_sv_unit
+# -- Importing package pkg
+# -- Compiling module Control
+# -- Compiling package RISC_V_pipe_line_sv_unit
+# -- Compiling module RISC_V_pipe_line
+# -- Compiling package pkg
+# -- Compiling package ImmGen_sv_unit
+# -- Compiling module ImmGen
+# -- Compiling module MUX_2_1
+# -- Compiling module Mux_WB
+# -- Compiling module DMEM
+# -- Compiling module IMEM
+# -- Compiling module PC
+# -- Compiling package PC_next_sv_unit
+# -- Compiling module PC_next
+# -- Compiling module Branch_Target_Buffer
+# -- Compiling module EX_MEM_reg
+# -- Compiling module Forwarding_Unit
+# -- Compiling module Hazard_Detection_Unit
+# -- Compiling module ID_EX_reg
+# -- Compiling module IF_ID_reg
+# -- Compiling module MEM_WB_reg
+# -- Compiling module Register
+# -- Compiling package ALU_sv_unit
+# -- Compiling module ALU
+# -- Compiling package ALU_control_sv_unit
+# -- Compiling module ALU_control
+# 
+# Top level modules:
+# 	RISC_V_pipe_line
+# 	Mux_WB
+# End time: 19:45:05 on Jun 20,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 19:45:05 on Jun 20,2026
+# vlog -reportprogress 300 -sv Test_Bench/RISC_V_pipe_line_tb.sv Test_Bench/RISC_V_pipe_line_tb1.sv Test_Bench/RISC_V_single_cycle_tb.sv 
+# ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
+# -- Compiling module RISC_V_pipe_line_tb
+# -- Compiling module RISC_V_pipe_line_tb1
+# -- Compiling module RISC_V_single_cycle_tb
+# 
+# Top level modules:
+# 	RISC_V_pipe_line_tb
+# 	RISC_V_pipe_line_tb1
+# 	RISC_V_single_cycle_tb
+# End time: 19:45:05 on Jun 20,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ** Note: (vsim-220) 'modelsim.ini' is used as the ini file.
+# vsim -voptargs="+acc" work.RISC_V_pipe_line_tb 
+# Start time: 19:45:05 on Jun 20,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vopt-220) 'modelsim.ini' is used as the ini file.
+# ** Error (suppressible): RTL/Memory/DMEM.sv(25): (vopt-7061) Variable 'memory' driven in an always_ff block, may not be driven by any other process. See RTL/Memory/DMEM.sv(15).
+# Optimization failed
+# ** Error: (vopt-2064) Compiler back-end code generation process terminated due to previous errors with code 12.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=2, Warnings=1.
+# Error loading design
+# Error: Error loading design
+#        Pausing macro execution
+# MACRO ./run/run.tcl PAUSED at line 15
+do run/run.tcl
+# End time: 19:46:11 on Jun 20,2026, Elapsed time: 0:01:06
+# Errors: 2, Warnings: 1
+# Questa Altera Starter FPGA Edition-64 vmap 2025.2 Lib Mapping Utility 2025.05 May 31 2025
+# vmap work work 
+# ** Note: (vmap-220) 'modelsim.ini' is used as the ini file.
+# Modifying modelsim.ini
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 19:46:11 on Jun 20,2026
+# vlog -reportprogress 300 -sv RTL/Design/pkg.sv 
+# ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
+# -- Compiling package pkg
+# 
+# Top level modules:
+# 	--none--
+# End time: 19:46:11 on Jun 20,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 19:46:11 on Jun 20,2026
+# vlog -reportprogress 300 -sv RTL/CtrlUnit/Control.sv RTL/Design/RISC_V_pipe_line.sv RTL/Design/pkg.sv RTL/ImmGen/ImmGen.sv RTL/MUX/MUX_2_1.sv RTL/MUX/Mux_WB.sv RTL/Memory/DMEM.sv RTL/Memory/IMEM.sv RTL/PC/PC.sv RTL/PC/PC_next.sv RTL/Pipeline/Branch_Target_Buffer.sv RTL/Pipeline/EX_MEM_reg.sv RTL/Pipeline/Forwarding_Unit.sv RTL/Pipeline/Hazard_Detection_Unit.sv RTL/Pipeline/ID_EX_reg.sv RTL/Pipeline/IF_ID_reg.sv RTL/Pipeline/MEM_WB_reg.sv RTL/Register/Register.sv RTL/design/ALU.sv RTL/design/ALU_control.sv 
+# ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
+# -- Compiling package Control_sv_unit
+# -- Importing package pkg
+# -- Compiling module Control
+# -- Compiling package RISC_V_pipe_line_sv_unit
+# -- Compiling module RISC_V_pipe_line
+# -- Compiling package pkg
+# -- Compiling package ImmGen_sv_unit
+# -- Compiling module ImmGen
+# -- Compiling module MUX_2_1
+# -- Compiling module Mux_WB
+# -- Compiling module DMEM
+# -- Compiling module IMEM
+# -- Compiling module PC
+# -- Compiling package PC_next_sv_unit
+# -- Compiling module PC_next
+# -- Compiling module Branch_Target_Buffer
+# -- Compiling module EX_MEM_reg
+# -- Compiling module Forwarding_Unit
+# -- Compiling module Hazard_Detection_Unit
+# -- Compiling module ID_EX_reg
+# -- Compiling module IF_ID_reg
+# -- Compiling module MEM_WB_reg
+# -- Compiling module Register
+# -- Compiling package ALU_sv_unit
+# -- Compiling module ALU
+# -- Compiling package ALU_control_sv_unit
+# -- Compiling module ALU_control
+# 
+# Top level modules:
+# 	RISC_V_pipe_line
+# 	Mux_WB
+# End time: 19:46:11 on Jun 20,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 19:46:11 on Jun 20,2026
+# vlog -reportprogress 300 -sv Test_Bench/RISC_V_pipe_line_tb.sv Test_Bench/RISC_V_pipe_line_tb1.sv Test_Bench/RISC_V_single_cycle_tb.sv 
+# ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
+# -- Compiling module RISC_V_pipe_line_tb
+# -- Compiling module RISC_V_pipe_line_tb1
+# -- Compiling module RISC_V_single_cycle_tb
+# 
+# Top level modules:
+# 	RISC_V_pipe_line_tb
+# 	RISC_V_pipe_line_tb1
+# 	RISC_V_single_cycle_tb
+# End time: 19:46:11 on Jun 20,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ** Note: (vsim-220) 'modelsim.ini' is used as the ini file.
+# vsim -voptargs="+acc" work.RISC_V_pipe_line_tb 
+# Start time: 19:46:11 on Jun 20,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vopt-220) 'modelsim.ini' is used as the ini file.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.RISC_V_pipe_line_tb(fast)
+# Loading work.pkg(fast)
+# Loading work.RISC_V_pipe_line_sv_unit(fast)
+# Loading work.RISC_V_pipe_line(fast)
+# Loading work.PC(fast)
+# Loading work.Branch_Target_Buffer(fast)
+# Loading work.IMEM(fast)
+# Loading work.IF_ID_reg(fast)
+# Loading work.Register(fast)
+# Loading work.ImmGen_sv_unit(fast)
+# Loading work.ImmGen(fast)
+# Loading work.Control_sv_unit(fast)
+# Loading work.Control(fast)
+# Loading work.ID_EX_reg(fast)
+# Loading work.MUX_2_1(fast)
+# Loading work.ALU_control_sv_unit(fast)
+# Loading work.ALU_control(fast)
+# Loading work.ALU_sv_unit(fast)
+# Loading work.ALU(fast)
+# Loading work.PC_next_sv_unit(fast)
+# Loading work.PC_next(fast)
+# Loading work.EX_MEM_reg(fast)
+# Loading work.DMEM(fast)
+# Loading work.MEM_WB_reg(fast)
+# Loading work.Hazard_Detection_Unit(fast)
+# Loading work.Forwarding_Unit(fast)
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# .main_pane.wave.interior.cs.body.pw.wf
+# =========================================================
+#            STARTING PIPELINE SIMULATION                  
+# =========================================================
+# 
+# Time=0 | PC=0 | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=50000 | PC=4 | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=70000 | PC=8 | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=90000 | PC=12 | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=110000 | PC=16 | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=130000 | PC=24 | a0(x10)=64 | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=150000 | PC=28 | a0(x10)=64 | a1(x11)=3 | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=170000 | PC=32 | a0(x10)=64 | a1(x11)=3 | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=12
+# Time=190000 | PC=36 | a0(x10)=64 | a1(x11)=3 | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=12
+# 
+# =======================================================
+#                   SELF-TEST RESULTS                      
+# =======================================================
+# Array sum at DMEM[0] = x (Expected = 60)
+# >>> STATUS: [ FAILED ] - Results mismatch! Check Hazards/Forwarding!
+# =======================================================
+# 
+# ** Note: $finish    : Test_Bench/RISC_V_pipe_line_tb.sv(63)
+#    Time: 210 ns  Iteration: 0  Instance: /RISC_V_pipe_line_tb
+# 1
+# Break in Module RISC_V_pipe_line_tb at Test_Bench/RISC_V_pipe_line_tb.sv line 63
+# 0 ps
+# 220500 ps
+do run/run.tcl
+# End time: 19:48:47 on Jun 20,2026, Elapsed time: 0:02:36
+# Errors: 0, Warnings: 1
+# Questa Altera Starter FPGA Edition-64 vmap 2025.2 Lib Mapping Utility 2025.05 May 31 2025
+# vmap work work 
+# ** Note: (vmap-220) 'modelsim.ini' is used as the ini file.
+# Modifying modelsim.ini
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 19:48:47 on Jun 20,2026
+# vlog -reportprogress 300 -sv RTL/Design/pkg.sv 
+# ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
+# -- Compiling package pkg
+# 
+# Top level modules:
+# 	--none--
+# End time: 19:48:47 on Jun 20,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 19:48:47 on Jun 20,2026
+# vlog -reportprogress 300 -sv RTL/CtrlUnit/Control.sv RTL/Design/RISC_V_pipe_line.sv RTL/Design/pkg.sv RTL/ImmGen/ImmGen.sv RTL/MUX/MUX_2_1.sv RTL/MUX/Mux_WB.sv RTL/Memory/DMEM.sv RTL/Memory/IMEM.sv RTL/PC/PC.sv RTL/PC/PC_next.sv RTL/Pipeline/Branch_Target_Buffer.sv RTL/Pipeline/EX_MEM_reg.sv RTL/Pipeline/Forwarding_Unit.sv RTL/Pipeline/Hazard_Detection_Unit.sv RTL/Pipeline/ID_EX_reg.sv RTL/Pipeline/IF_ID_reg.sv RTL/Pipeline/MEM_WB_reg.sv RTL/Register/Register.sv RTL/design/ALU.sv RTL/design/ALU_control.sv 
+# ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
+# -- Compiling package Control_sv_unit
+# -- Importing package pkg
+# -- Compiling module Control
+# -- Compiling package RISC_V_pipe_line_sv_unit
+# -- Compiling module RISC_V_pipe_line
+# -- Compiling package pkg
+# -- Compiling package ImmGen_sv_unit
+# -- Compiling module ImmGen
+# -- Compiling module MUX_2_1
+# -- Compiling module Mux_WB
+# -- Compiling module DMEM
+# -- Compiling module IMEM
+# -- Compiling module PC
+# -- Compiling package PC_next_sv_unit
+# -- Compiling module PC_next
+# -- Compiling module Branch_Target_Buffer
+# -- Compiling module EX_MEM_reg
+# -- Compiling module Forwarding_Unit
+# -- Compiling module Hazard_Detection_Unit
+# -- Compiling module ID_EX_reg
+# -- Compiling module IF_ID_reg
+# -- Compiling module MEM_WB_reg
+# -- Compiling module Register
+# -- Compiling package ALU_sv_unit
+# -- Compiling module ALU
+# -- Compiling package ALU_control_sv_unit
+# -- Compiling module ALU_control
+# 
+# Top level modules:
+# 	RISC_V_pipe_line
+# 	Mux_WB
+# End time: 19:48:47 on Jun 20,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 19:48:47 on Jun 20,2026
+# vlog -reportprogress 300 -sv Test_Bench/RISC_V_pipe_line_tb.sv Test_Bench/RISC_V_pipe_line_tb1.sv Test_Bench/RISC_V_single_cycle_tb.sv 
+# ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
+# -- Compiling module RISC_V_pipe_line_tb
+# -- Compiling module RISC_V_pipe_line_tb1
+# -- Compiling module RISC_V_single_cycle_tb
+# 
+# Top level modules:
+# 	RISC_V_pipe_line_tb
+# 	RISC_V_pipe_line_tb1
+# 	RISC_V_single_cycle_tb
+# End time: 19:48:47 on Jun 20,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ** Note: (vsim-220) 'modelsim.ini' is used as the ini file.
+# vsim -voptargs="+acc" work.RISC_V_pipe_line_tb 
+# Start time: 19:48:47 on Jun 20,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vopt-220) 'modelsim.ini' is used as the ini file.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.RISC_V_pipe_line_tb(fast)
+# Loading work.pkg(fast)
+# Loading work.RISC_V_pipe_line_sv_unit(fast)
+# Loading work.RISC_V_pipe_line(fast)
+# Loading work.PC(fast)
+# Loading work.Branch_Target_Buffer(fast)
+# Loading work.IMEM(fast)
+# Loading work.IF_ID_reg(fast)
+# Loading work.Register(fast)
+# Loading work.ImmGen_sv_unit(fast)
+# Loading work.ImmGen(fast)
+# Loading work.Control_sv_unit(fast)
+# Loading work.Control(fast)
+# Loading work.ID_EX_reg(fast)
+# Loading work.MUX_2_1(fast)
+# Loading work.ALU_control_sv_unit(fast)
+# Loading work.ALU_control(fast)
+# Loading work.ALU_sv_unit(fast)
+# Loading work.ALU(fast)
+# Loading work.PC_next_sv_unit(fast)
+# Loading work.PC_next(fast)
+# Loading work.EX_MEM_reg(fast)
+# Loading work.DMEM(fast)
+# Loading work.MEM_WB_reg(fast)
+# Loading work.Hazard_Detection_Unit(fast)
+# Loading work.Forwarding_Unit(fast)
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# .main_pane.wave.interior.cs.body.pw.wf
+# =========================================================
+#            STARTING PIPELINE SIMULATION                  
+# =========================================================
+# 
+# Time=0 | PC=0 | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=50000 | PC=4 | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=70000 | PC=8 | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=90000 | PC=12 | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=110000 | PC=16 | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=130000 | PC=24 | a0(x10)=64 | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=150000 | PC=28 | a0(x10)=64 | a1(x11)=3 | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=170000 | PC=32 | a0(x10)=64 | a1(x11)=3 | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=12
+# Time=190000 | PC=36 | a0(x10)=64 | a1(x11)=3 | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=12
+# Time=210000 | PC=40 | a0(x10)=64 | a1(x11)=3 | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=12
+# Time=230000 | PC=44 | a0(x10)=64 | a1(x11)=3 | t0(x5)=0 | t1(x6)=x | t2(x7)=x | ra(x1)=12
+# Time=250000 | PC=44 | a0(x10)=64 | a1(x11)=3 | t0(x5)=0 | t1(x6)=0 | t2(x7)=x | ra(x1)=12
+# Time=270000 | PC=48 | a0(x10)=64 | a1(x11)=3 | t0(x5)=0 | t1(x6)=0 | t2(x7)=x | ra(x1)=12
+# Time=290000 | PC=52 | a0(x10)=64 | a1(x11)=3 | t0(x5)=0 | t1(x6)=0 | t2(x7)=10 | ra(x1)=12
+# Time=310000 | PC=56 | a0(x10)=64 | a1(x11)=3 | t0(x5)=0 | t1(x6)=0 | t2(x7)=10 | ra(x1)=12
+# Time=330000 | PC=60 | a0(x10)=64 | a1(x11)=3 | t0(x5)=10 | t1(x6)=0 | t2(x7)=10 | ra(x1)=12
+# Time=350000 | PC=32 | a0(x10)=72 | a1(x11)=3 | t0(x5)=10 | t1(x6)=0 | t2(x7)=10 | ra(x1)=12
+# Time=370000 | PC=36 | a0(x10)=72 | a1(x11)=3 | t0(x5)=10 | t1(x6)=1 | t2(x7)=10 | ra(x1)=12
+# Time=390000 | PC=40 | a0(x10)=72 | a1(x11)=3 | t0(x5)=10 | t1(x6)=1 | t2(x7)=10 | ra(x1)=12
+# Time=410000 | PC=44 | a0(x10)=72 | a1(x11)=3 | t0(x5)=10 | t1(x6)=1 | t2(x7)=10 | ra(x1)=12
+# Time=450000 | PC=48 | a0(x10)=72 | a1(x11)=3 | t0(x5)=10 | t1(x6)=1 | t2(x7)=10 | ra(x1)=12
+# Time=470000 | PC=52 | a0(x10)=72 | a1(x11)=3 | t0(x5)=10 | t1(x6)=1 | t2(x7)=20 | ra(x1)=12
+# Time=490000 | PC=32 | a0(x10)=72 | a1(x11)=3 | t0(x5)=10 | t1(x6)=1 | t2(x7)=20 | ra(x1)=12
+# Time=510000 | PC=36 | a0(x10)=72 | a1(x11)=3 | t0(x5)=30 | t1(x6)=1 | t2(x7)=20 | ra(x1)=12
+# Time=530000 | PC=40 | a0(x10)=80 | a1(x11)=3 | t0(x5)=30 | t1(x6)=1 | t2(x7)=20 | ra(x1)=12
+# Time=550000 | PC=44 | a0(x10)=80 | a1(x11)=3 | t0(x5)=30 | t1(x6)=2 | t2(x7)=20 | ra(x1)=12
+# Time=590000 | PC=48 | a0(x10)=80 | a1(x11)=3 | t0(x5)=30 | t1(x6)=2 | t2(x7)=20 | ra(x1)=12
+# Time=610000 | PC=52 | a0(x10)=80 | a1(x11)=3 | t0(x5)=30 | t1(x6)=2 | t2(x7)=30 | ra(x1)=12
+# Time=630000 | PC=32 | a0(x10)=80 | a1(x11)=3 | t0(x5)=30 | t1(x6)=2 | t2(x7)=30 | ra(x1)=12
+# Time=650000 | PC=36 | a0(x10)=80 | a1(x11)=3 | t0(x5)=60 | t1(x6)=2 | t2(x7)=30 | ra(x1)=12
+# Time=670000 | PC=40 | a0(x10)=88 | a1(x11)=3 | t0(x5)=60 | t1(x6)=2 | t2(x7)=30 | ra(x1)=12
+# Time=690000 | PC=56 | a0(x10)=88 | a1(x11)=3 | t0(x5)=60 | t1(x6)=3 | t2(x7)=30 | ra(x1)=12
+# Time=710000 | PC=60 | a0(x10)=88 | a1(x11)=3 | t0(x5)=60 | t1(x6)=3 | t2(x7)=30 | ra(x1)=12
+# Time=730000 | PC=64 | a0(x10)=88 | a1(x11)=3 | t0(x5)=60 | t1(x6)=3 | t2(x7)=30 | ra(x1)=12
+# Time=750000 | PC=68 | a0(x10)=88 | a1(x11)=3 | t0(x5)=60 | t1(x6)=3 | t2(x7)=30 | ra(x1)=12
+# Time=770000 | PC=12 | a0(x10)=88 | a1(x11)=3 | t0(x5)=60 | t1(x6)=3 | t2(x7)=30 | ra(x1)=12
+# Time=790000 | PC=16 | a0(x10)=60 | a1(x11)=3 | t0(x5)=60 | t1(x6)=3 | t2(x7)=30 | ra(x1)=12
+# Time=810000 | PC=20 | a0(x10)=60 | a1(x11)=3 | t0(x5)=60 | t1(x6)=3 | t2(x7)=30 | ra(x1)=12
+# Time=830000 | PC=24 | a0(x10)=60 | a1(x11)=3 | t0(x5)=60 | t1(x6)=3 | t2(x7)=30 | ra(x1)=12
+# Time=850000 | PC=16 | a0(x10)=60 | a1(x11)=3 | t0(x5)=60 | t1(x6)=3 | t2(x7)=30 | ra(x1)=12
+# 
+# =======================================================
+#                   SELF-TEST RESULTS                      
+# =======================================================
+# Array sum at DMEM[0] = 60 (Expected = 60)
+# >>> STATUS: [ PASS ] - Pipeline executed function perfectly!
+# =======================================================
+# 
+# ** Note: $finish    : Test_Bench/RISC_V_pipe_line_tb.sv(63)
+#    Time: 2110 ns  Iteration: 0  Instance: /RISC_V_pipe_line_tb
+# 1
+# Break in Module RISC_V_pipe_line_tb at Test_Bench/RISC_V_pipe_line_tb.sv line 63
+# 0 ps
+# 2215500 ps

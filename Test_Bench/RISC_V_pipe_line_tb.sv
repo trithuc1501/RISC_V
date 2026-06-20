@@ -29,19 +29,19 @@ module RISC_V_pipe_line_tb;
 
         rst_n = '0;
 
-        for (int i = 0; i < 1024; i++) dut.IMEM_top.memory[i] = '0;
-        for (int i = 0; i < 1024; i++) dut.DMEM_top.memory[i] = '0;
-        for (int i = 0; i < 32; i++)   dut.Register_top.Register[i] = '0;
+        // for (int i = 0; i < 1024; i++) dut.IMEM_top.memory[i] = '0;
+        // for (int i = 0; i < 1024; i++) dut.DMEM_top.memory[i] = '0;
+        // for (int i = 0; i < 32; i++)   dut.Register_top.Register[i] = '0;
 
-        $readmemh("program.hex", dut.IMEM_top.memory);
-        $readmemh("dmem.hex", dut.DMEM_top.memory);
+        $readmemh("Test_Bench/program.hex", dut.IMEM_top.memory);
+        $readmemh("Test_Bench/dmem.hex", dut.DMEM_top.memory);
 
         #(CLK_PERIOD * 2);
         rst_n = '1; 
 
         wait(dut.IF_PC == 64'd16);
         
-        #(CLK_PERIOD * 5); 
+        #(CLK_PERIOD * 100); 
 
         final_result = {dut.DMEM_top.memory[7], dut.DMEM_top.memory[6], 
                         dut.DMEM_top.memory[5], dut.DMEM_top.memory[4],
