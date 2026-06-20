@@ -1,0 +1,34 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/trithuc/Documents/projects/RISC_V
+Xpkg
+DXx6 sv_std 3 std 0 22 @5XbY]_OacJl=`ToSm<M^0
+!s110 1781957497
+!i10b 1
+!s100 cmZ<eCgPnlaT<A2IzRX==2
+IKffZ8CT1=aKjE?AVF9W_K2
+S1
+R0
+w1780632443
+8Design/pkg.sv
+FDesign/pkg.sv
+!i122 0
+L0 1 0
+VKffZ8CT1=aKjE?AVF9W_K2
+OL;L;2025.2;82
+r1
+!s85 0
+31
+!s108 1781957497.000000
+!s107 Design/pkg.sv|Design/RISC_V_single_cycle.sv|Design/RISC_V_pipe_line.sv|
+!s90 -reportprogress|300|-sv|Design/RISC_V_pipe_line.sv|Design/RISC_V_single_cycle.sv|Design/pkg.sv|
+!i113 0
+o-sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+tCvgOpt 0

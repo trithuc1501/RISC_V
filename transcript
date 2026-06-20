@@ -1,0 +1,50 @@
+# //  Questa Altera Starter FPGA Edition-64
+# //  Version 2025.2 linux_x86_64 May 31 2025
+# //
+# // Unpublished work. Copyright 2025 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# do run/run.tcl
+# Questa Altera Starter FPGA Edition-64 vmap 2025.2 Lib Mapping Utility 2025.05 May 31 2025
+# vmap work work 
+# ** Note: (vmap-220) 'modelsim.ini' is used as the ini file.
+# Modifying modelsim.ini
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 19:11:37 on Jun 20,2026
+# vlog -reportprogress 300 -sv Design/RISC_V_pipe_line.sv Design/RISC_V_single_cycle.sv Design/pkg.sv 
+# ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
+# ** Error: Design/RISC_V_pipe_line.sv(1): (vlog-13006) Could not find the package (pkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
+# ** Error: Design/RISC_V_single_cycle.sv(1): (vlog-13006) Could not find the package (pkg).  Design read will continue, but expect a cascade of errors after this failure.  Furthermore if you experience a vopt-7 error immediately before this error then please check the package names or the library search paths on the command line.
+# ** Error: Design/RISC_V_single_cycle.sv(3): Cannot find `include file "ALU_control.sv" in directories:
+#     /home/trithuc/altera_lite/25.1std/questa_fse/ovm-2.1.2/../verilog_src/ovm-2.1.2/src, /home/trithuc/altera_lite/25.1std/questa_fse/uvm-1.1d/../verilog_src/uvm-1.1d/src
+# ** Error: Design/RISC_V_single_cycle.sv(4): Cannot find `include file "ALU.sv" in directories:
+#     /home/trithuc/altera_lite/25.1std/questa_fse/ovm-2.1.2/../verilog_src/ovm-2.1.2/src, /home/trithuc/altera_lite/25.1std/questa_fse/uvm-1.1d/../verilog_src/uvm-1.1d/src
+# ** Error: Design/RISC_V_single_cycle.sv(5): Cannot find `include file "Control.sv" in directories:
+#     /home/trithuc/altera_lite/25.1std/questa_fse/ovm-2.1.2/../verilog_src/ovm-2.1.2/src, /home/trithuc/altera_lite/25.1std/questa_fse/uvm-1.1d/../verilog_src/uvm-1.1d/src
+# ** Error: Design/RISC_V_single_cycle.sv(6): Cannot find `include file "ImmGen.sv" in directories:
+#     /home/trithuc/altera_lite/25.1std/questa_fse/ovm-2.1.2/../verilog_src/ovm-2.1.2/src, /home/trithuc/altera_lite/25.1std/questa_fse/uvm-1.1d/../verilog_src/uvm-1.1d/src
+# ** Error: Design/RISC_V_single_cycle.sv(7): Cannot find `include file "PC.sv" in directories:
+#     /home/trithuc/altera_lite/25.1std/questa_fse/ovm-2.1.2/../verilog_src/ovm-2.1.2/src, /home/trithuc/altera_lite/25.1std/questa_fse/uvm-1.1d/../verilog_src/uvm-1.1d/src
+# ** Error: Design/RISC_V_single_cycle.sv(8): Cannot find `include file "Register.sv" in directories:
+#     /home/trithuc/altera_lite/25.1std/questa_fse/ovm-2.1.2/../verilog_src/ovm-2.1.2/src, /home/trithuc/altera_lite/25.1std/questa_fse/uvm-1.1d/../verilog_src/uvm-1.1d/src
+# ** Error: Design/RISC_V_single_cycle.sv(9): Cannot find `include file "IMEM.sv" in directories:
+#     /home/trithuc/altera_lite/25.1std/questa_fse/ovm-2.1.2/../verilog_src/ovm-2.1.2/src, /home/trithuc/altera_lite/25.1std/questa_fse/uvm-1.1d/../verilog_src/uvm-1.1d/src
+# ** Error: Design/RISC_V_single_cycle.sv(10): Cannot find `include file "DMEM.sv" in directories:
+#     /home/trithuc/altera_lite/25.1std/questa_fse/ovm-2.1.2/../verilog_src/ovm-2.1.2/src, /home/trithuc/altera_lite/25.1std/questa_fse/uvm-1.1d/../verilog_src/uvm-1.1d/src
+# ** Error: Design/RISC_V_single_cycle.sv(11): Cannot find `include file "Mux_WB.sv" in directories:
+#     /home/trithuc/altera_lite/25.1std/questa_fse/ovm-2.1.2/../verilog_src/ovm-2.1.2/src, /home/trithuc/altera_lite/25.1std/questa_fse/uvm-1.1d/../verilog_src/uvm-1.1d/src
+# End time: 19:11:37 on Jun 20,2026, Elapsed time: 0:00:00
+# Errors: 11, Warnings: 0
+# ** Error: /home/trithuc/altera_lite/25.1std/questa_fse/linux_x86_64/vlog failed.
+# Error in macro ./run/run.tcl line 9
+# /home/trithuc/altera_lite/25.1std/questa_fse/linux_x86_64/vlog failed.
+#     while executing
+# "vlog -sv Design/*.sv"
