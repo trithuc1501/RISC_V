@@ -19,7 +19,6 @@ module RISC_V_pipe_line (
     logic [63:0] ID_Read_data_2;
     logic [63:0] ID_ImmExt;
     logic [10:0] ID_Control_signals;
-    logic ID_Predicted_Taken;
 
     logic [63:0] EX_PC;
     logic [31:0] EX_Instruction;
@@ -32,7 +31,6 @@ module RISC_V_pipe_line (
     logic [10:0] EX_Control_signals;
     logic [63:0] EX_ALU_result;
     logic [63:0] EX_Data_To_MEM;
-    logic EX_Predicted_Taken;
     logic EX_Mispredicted;
     logic EX_BTB_Update_EN;
 
@@ -108,11 +106,12 @@ module RISC_V_pipe_line (
         .BTB_Hit(IF_BTB_Hit),
 
         .EX_Update_Enable(EX_BTB_Update_EN),
+        .EX_Update_Valid(Branch_Taken),
         .EX_PC(EX_PC),
         .EX_Target_Address(Target_Address)
     );
 
-    assign EX_BTB_Update_EN = (EX_Control_signals[2] || EX_Control_signals[8]) && Branch_Taken;
+    assign EX_BTB_Update_EN = EX_Control_signals[2] || EX_Control_signals[8];
 
     IMEM IMEM_top (
         .Read_address(IF_PC),

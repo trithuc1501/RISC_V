@@ -6,7 +6,7 @@
 1 11 ALU_sv_unit 4 fast 44 /home/trithuc/Documents/projects/RISC_V/work 0 0 0 0 0 0
 1 15 PC_next_sv_unit 4 fast 44 /home/trithuc/Documents/projects/RISC_V/work 0 0 0 0 0 0
 1 2 PC 4 fast 44 /home/trithuc/Documents/projects/RISC_V/work 0 0 0 0 35 0
-1 20 Branch_Target_Buffer 4 fast 44 /home/trithuc/Documents/projects/RISC_V/work 0 0 0 0 121 0
+1 20 Branch_Target_Buffer 4 fast 44 /home/trithuc/Documents/projects/RISC_V/work 0 0 0 0 127 0
 1 4 IMEM 4 fast 44 /home/trithuc/Documents/projects/RISC_V/work 0 0 0 0 22 0
 1 9 IF_ID_reg 4 fast 44 /home/trithuc/Documents/projects/RISC_V/work 0 0 0 0 48 0
 1 8 Register 4 fast 44 /home/trithuc/Documents/projects/RISC_V/work 0 0 0 0 50 0
@@ -22,5 +22,5 @@
 1 10 MEM_WB_reg 4 fast 44 /home/trithuc/Documents/projects/RISC_V/work 0 0 0 0 61 0
 1 21 Hazard_Detection_Unit 4 fast 44 /home/trithuc/Documents/projects/RISC_V/work 0 0 0 0 60 0
 1 15 Forwarding_Unit 4 fast 44 /home/trithuc/Documents/projects/RISC_V/work 0 0 0 0 69 0
-1 16 RISC_V_pipe_line 4 fast 44 /home/trithuc/Documents/projects/RISC_V/work 0 0 131072 0 369 0
-1 19 RISC_V_pipe_line_tb 4 fast 44 /home/trithuc/Documents/projects/RISC_V/work 0 0 0 0 123 0
+1 16 RISC_V_pipe_line 4 fast 44 /home/trithuc/Documents/projects/RISC_V/work 0 0 131072 0 366 0
+1 19 RISC_V_pipe_line_tb 4 fast 44 /home/trithuc/Documents/projects/RISC_V/work 0 0 0 0 124 0

@@ -41,7 +41,7 @@ module RISC_V_pipe_line_tb;
 
         wait(dut.IF_PC == 64'd16);
         
-        #(CLK_PERIOD * 100); 
+        #(CLK_PERIOD * 50); 
 
         final_result = {dut.DMEM_top.memory[7], dut.DMEM_top.memory[6], 
                         dut.DMEM_top.memory[5], dut.DMEM_top.memory[4],
@@ -64,9 +64,10 @@ module RISC_V_pipe_line_tb;
     end
 
     initial begin
-        $monitor("Time=%0t | PC=%0d | a0(x10)=%0d | a1(x11)=%0d | t0(x5)=%0d | t1(x6)=%0d | t2(x7)=%0d | ra(x1)=%0d", 
+        $monitor("Time=%0t | PC=%0d | Instruct=%08h | a0(x10)=%0d | a1(x11)=%0d | t0(x5)=%0d | t1(x6)=%0d | t2(x7)=%0d | ra(x1)=%0d", 
                  $time, 
                  dut.IF_PC,
+                 dut.IF_Instruction,
                  dut.Register_top.Register[10], 
                  dut.Register_top.Register[11], 
                  dut.Register_top.Register[5],  

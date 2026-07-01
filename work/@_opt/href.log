@@ -1,12 +1,13 @@
-BEGIN 1:IMEM:fast:work
-    memory :  1:RISC_V_pipe_line_tb:fast:work
-END 
 BEGIN 1:RISC_V_pipe_line:fast:work
+    IF_Instruction :  1:RISC_V_pipe_line_tb:fast:work
     IF_PC :  1:RISC_V_pipe_line_tb:fast:work
 END 
 BEGIN 1:Register:fast:work
     Register :  1:RISC_V_pipe_line_tb:fast:work
 END 
 BEGIN 1:DMEM:fast:work
+    memory :  1:RISC_V_pipe_line_tb:fast:work
+END 
+BEGIN 1:IMEM:fast:work
     memory :  1:RISC_V_pipe_line_tb:fast:work
 END 

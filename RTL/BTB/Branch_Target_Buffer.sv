@@ -9,6 +9,7 @@ module Branch_Target_Buffer #(
     output logic BTB_Hit,
 
     input logic EX_Update_Enable,
+    input logic EX_Update_Valid,
     input logic [63:0] EX_PC,
     input logic [63:0] EX_Target_Address
 );
@@ -43,9 +44,11 @@ module Branch_Target_Buffer #(
             end
         end 
         else if (EX_Update_Enable) begin
-            Valid_Array[Write_Index] <= 1'b1;
-            Tag_Array[Write_Index] <= EX_PC;
-            Target_Array[Write_Index] <= EX_Target_Address;
+            Valid_Array[Write_Index] <= EX_Update_Valid;
+            if (EX_Update_Valid) begin
+                Tag_Array[Write_Index] <= EX_PC;
+                Target_Array[Write_Index] <= EX_Target_Address;
+            end
         end
     end
 

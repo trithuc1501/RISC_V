@@ -18,21 +18,26 @@
 # ** Note: (vmap-220) 'modelsim.ini' is used as the ini file.
 # Modifying modelsim.ini
 # Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
-# Start time: 19:42:39 on Jun 20,2026
+# Start time: 20:40:40 on Jun 29,2026
 # vlog -reportprogress 300 -sv RTL/Design/pkg.sv 
 # ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
 # -- Compiling package pkg
 # 
 # Top level modules:
 # 	--none--
-# End time: 19:42:39 on Jun 20,2026, Elapsed time: 0:00:00
+# End time: 20:40:40 on Jun 29,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
-# Start time: 19:42:39 on Jun 20,2026
-# vlog -reportprogress 300 -sv RTL/CtrlUnit/Control.sv RTL/Design/RISC_V_pipe_line.sv RTL/Design/pkg.sv RTL/ImmGen/ImmGen.sv RTL/MUX/MUX_2_1.sv RTL/MUX/Mux_WB.sv RTL/Memory/DMEM.sv RTL/Memory/IMEM.sv RTL/PC/PC.sv RTL/PC/PC_next.sv RTL/Pipeline/Branch_Target_Buffer.sv RTL/Pipeline/EX_MEM_reg.sv RTL/Pipeline/Forwarding_Unit.sv RTL/Pipeline/Hazard_Detection_Unit.sv RTL/Pipeline/ID_EX_reg.sv RTL/Pipeline/IF_ID_reg.sv RTL/Pipeline/MEM_WB_reg.sv RTL/Register/Register.sv RTL/design/ALU.sv RTL/design/ALU_control.sv 
+# Start time: 20:40:40 on Jun 29,2026
+# vlog -reportprogress 300 -sv RTL/ALU/ALU.sv RTL/ALU/ALU_control.sv RTL/BTB/Branch_Target_Buffer.sv RTL/CtrlUnit/Control.sv RTL/Design/RISC_V_pipe_line.sv RTL/Design/pkg.sv RTL/ImmGen/ImmGen.sv RTL/MUX/MUX_2_1.sv RTL/MUX/Mux_WB.sv RTL/Memory/DMEM.sv RTL/Memory/IMEM.sv RTL/PC/PC.sv RTL/PC/PC_next.sv RTL/Pipeline/EX_MEM_reg.sv RTL/Pipeline/Forwarding_Unit.sv RTL/Pipeline/Hazard_Detection_Unit.sv RTL/Pipeline/ID_EX_reg.sv RTL/Pipeline/IF_ID_reg.sv RTL/Pipeline/MEM_WB_reg.sv RTL/Register/Register.sv 
 # ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
-# -- Compiling package Control_sv_unit
+# -- Compiling package ALU_sv_unit
 # -- Importing package pkg
+# -- Compiling module ALU
+# -- Compiling package ALU_control_sv_unit
+# -- Compiling module ALU_control
+# -- Compiling module Branch_Target_Buffer
+# -- Compiling package Control_sv_unit
 # -- Compiling module Control
 # -- Compiling package RISC_V_pipe_line_sv_unit
 # -- Compiling module RISC_V_pipe_line
@@ -46,7 +51,6 @@
 # -- Compiling module PC
 # -- Compiling package PC_next_sv_unit
 # -- Compiling module PC_next
-# -- Compiling module Branch_Target_Buffer
 # -- Compiling module EX_MEM_reg
 # -- Compiling module Forwarding_Unit
 # -- Compiling module Hazard_Detection_Unit
@@ -54,33 +58,27 @@
 # -- Compiling module IF_ID_reg
 # -- Compiling module MEM_WB_reg
 # -- Compiling module Register
-# -- Compiling package ALU_sv_unit
-# -- Compiling module ALU
-# -- Compiling package ALU_control_sv_unit
-# -- Compiling module ALU_control
 # 
 # Top level modules:
 # 	RISC_V_pipe_line
 # 	Mux_WB
-# End time: 19:42:39 on Jun 20,2026, Elapsed time: 0:00:00
+# End time: 20:40:40 on Jun 29,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
-# Start time: 19:42:39 on Jun 20,2026
-# vlog -reportprogress 300 -sv Test_Bench/RISC_V_pipe_line_tb.sv Test_Bench/RISC_V_pipe_line_tb1.sv Test_Bench/RISC_V_single_cycle_tb.sv 
+# Start time: 20:40:40 on Jun 29,2026
+# vlog -reportprogress 300 -sv Test_Bench/RISC_V_pipe_line_tb.sv Test_Bench/RISC_V_pipe_line_tb1.sv 
 # ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
 # -- Compiling module RISC_V_pipe_line_tb
 # -- Compiling module RISC_V_pipe_line_tb1
-# -- Compiling module RISC_V_single_cycle_tb
 # 
 # Top level modules:
 # 	RISC_V_pipe_line_tb
 # 	RISC_V_pipe_line_tb1
-# 	RISC_V_single_cycle_tb
-# End time: 19:42:39 on Jun 20,2026, Elapsed time: 0:00:00
+# End time: 20:40:40 on Jun 29,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # ** Note: (vsim-220) 'modelsim.ini' is used as the ini file.
 # vsim -voptargs="+acc" work.RISC_V_pipe_line_tb 
-# Start time: 19:42:39 on Jun 20,2026
+# Start time: 20:40:40 on Jun 29,2026
 # ** Note: (vsim-3812) Design is being optimized...
 # ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
 # ** Note: (vopt-220) 'modelsim.ini' is used as the ini file.
@@ -119,15 +117,60 @@
 #            STARTING PIPELINE SIMULATION                  
 # =========================================================
 # 
-# Time=0 | PC=0 | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
-# Time=50000 | PC=4 | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
-# Time=70000 | PC=8 | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
-# Time=90000 | PC=12 | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
-# Time=110000 | PC=16 | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
-# Time=130000 | PC=24 | a0(x10)=64 | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
-# Time=150000 | PC=28 | a0(x10)=64 | a1(x11)=3 | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
-# Time=170000 | PC=32 | a0(x10)=64 | a1(x11)=3 | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=12
-# Time=190000 | PC=36 | a0(x10)=64 | a1(x11)=3 | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=12
+# Time=0 | PC=0 | Instruct=13050004 | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=50000 | PC=4 | Instruct=93053000 | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=70000 | PC=8 | Instruct=ef000001 | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=90000 | PC=12 | Instruct=2330a000 | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=110000 | PC=16 | Instruct=6f000000 | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=130000 | PC=20 | Instruct=93020000 | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=150000 | PC=24 | Instruct=13030000 | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=170000 | PC=28 | Instruct=635cb300 | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=190000 | PC=32 | Instruct=83330500 | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=210000 | PC=36 | Instruct=b3827200 | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=230000 | PC=40 | Instruct=13058500 | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=250000 | PC=44 | Instruct=13031300 | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=270000 | PC=48 | Instruct=6ff0dffe | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=290000 | PC=52 | Instruct=33055000 | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=310000 | PC=56 | Instruct=67800000 | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=330000 | PC=60 | Instruct=xxxxxxxx | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=350000 | PC=64 | Instruct=xxxxxxxx | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=370000 | PC=68 | Instruct=xxxxxxxx | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=390000 | PC=72 | Instruct=xxxxxxxx | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=410000 | PC=76 | Instruct=xxxxxxxx | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=430000 | PC=80 | Instruct=xxxxxxxx | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=450000 | PC=84 | Instruct=xxxxxxxx | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=470000 | PC=88 | Instruct=xxxxxxxx | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=490000 | PC=92 | Instruct=xxxxxxxx | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=510000 | PC=96 | Instruct=xxxxxxxx | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=530000 | PC=100 | Instruct=xxxxxxxx | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=550000 | PC=104 | Instruct=xxxxxxxx | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=570000 | PC=108 | Instruct=xxxxxxxx | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=590000 | PC=112 | Instruct=xxxxxxxx | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=610000 | PC=116 | Instruct=xxxxxxxx | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=630000 | PC=120 | Instruct=xxxxxxxx | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=650000 | PC=124 | Instruct=xxxxxxxx | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=670000 | PC=128 | Instruct=xxxxxxxx | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=690000 | PC=132 | Instruct=xxxxxxxx | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=710000 | PC=136 | Instruct=xxxxxxxx | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=730000 | PC=140 | Instruct=xxxxxxxx | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=750000 | PC=144 | Instruct=xxxxxxxx | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=770000 | PC=148 | Instruct=xxxxxxxx | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=790000 | PC=152 | Instruct=xxxxxxxx | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=810000 | PC=156 | Instruct=xxxxxxxx | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=830000 | PC=160 | Instruct=xxxxxxxx | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=850000 | PC=164 | Instruct=xxxxxxxx | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=870000 | PC=168 | Instruct=xxxxxxxx | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=890000 | PC=172 | Instruct=xxxxxxxx | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=910000 | PC=176 | Instruct=xxxxxxxx | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=930000 | PC=180 | Instruct=xxxxxxxx | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=950000 | PC=184 | Instruct=xxxxxxxx | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=970000 | PC=188 | Instruct=xxxxxxxx | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=990000 | PC=192 | Instruct=xxxxxxxx | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=1010000 | PC=196 | Instruct=xxxxxxxx | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=1030000 | PC=200 | Instruct=xxxxxxxx | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=1050000 | PC=204 | Instruct=xxxxxxxx | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=1070000 | PC=208 | Instruct=xxxxxxxx | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=1090000 | PC=212 | Instruct=xxxxxxxx | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
 # 
 # =======================================================
 #                   SELF-TEST RESULTS                      
@@ -137,36 +180,39 @@
 # =======================================================
 # 
 # ** Note: $finish    : Test_Bench/RISC_V_pipe_line_tb.sv(63)
-#    Time: 210 ns  Iteration: 0  Instance: /RISC_V_pipe_line_tb
+#    Time: 1110 ns  Iteration: 0  Instance: /RISC_V_pipe_line_tb
 # 1
 # Break in Module RISC_V_pipe_line_tb at Test_Bench/RISC_V_pipe_line_tb.sv line 63
 # 0 ps
-# 220500 ps
-quit -sim
-# End time: 19:43:32 on Jun 20,2026, Elapsed time: 0:00:53
-# Errors: 0, Warnings: 1
-quit -sim
+# 1165500 ps
 do run/run.tcl
+# End time: 20:45:05 on Jun 29,2026, Elapsed time: 0:04:25
+# Errors: 0, Warnings: 1
 # Questa Altera Starter FPGA Edition-64 vmap 2025.2 Lib Mapping Utility 2025.05 May 31 2025
 # vmap work work 
 # ** Note: (vmap-220) 'modelsim.ini' is used as the ini file.
 # Modifying modelsim.ini
 # Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
-# Start time: 19:43:58 on Jun 20,2026
+# Start time: 20:45:05 on Jun 29,2026
 # vlog -reportprogress 300 -sv RTL/Design/pkg.sv 
 # ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
 # -- Compiling package pkg
 # 
 # Top level modules:
 # 	--none--
-# End time: 19:43:58 on Jun 20,2026, Elapsed time: 0:00:00
+# End time: 20:45:05 on Jun 29,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
-# Start time: 19:43:58 on Jun 20,2026
-# vlog -reportprogress 300 -sv RTL/CtrlUnit/Control.sv RTL/Design/RISC_V_pipe_line.sv RTL/Design/pkg.sv RTL/ImmGen/ImmGen.sv RTL/MUX/MUX_2_1.sv RTL/MUX/Mux_WB.sv RTL/Memory/DMEM.sv RTL/Memory/IMEM.sv RTL/PC/PC.sv RTL/PC/PC_next.sv RTL/Pipeline/Branch_Target_Buffer.sv RTL/Pipeline/EX_MEM_reg.sv RTL/Pipeline/Forwarding_Unit.sv RTL/Pipeline/Hazard_Detection_Unit.sv RTL/Pipeline/ID_EX_reg.sv RTL/Pipeline/IF_ID_reg.sv RTL/Pipeline/MEM_WB_reg.sv RTL/Register/Register.sv RTL/design/ALU.sv RTL/design/ALU_control.sv 
+# Start time: 20:45:05 on Jun 29,2026
+# vlog -reportprogress 300 -sv RTL/ALU/ALU.sv RTL/ALU/ALU_control.sv RTL/BTB/Branch_Target_Buffer.sv RTL/CtrlUnit/Control.sv RTL/Design/RISC_V_pipe_line.sv RTL/Design/pkg.sv RTL/ImmGen/ImmGen.sv RTL/MUX/MUX_2_1.sv RTL/MUX/Mux_WB.sv RTL/Memory/DMEM.sv RTL/Memory/IMEM.sv RTL/PC/PC.sv RTL/PC/PC_next.sv RTL/Pipeline/EX_MEM_reg.sv RTL/Pipeline/Forwarding_Unit.sv RTL/Pipeline/Hazard_Detection_Unit.sv RTL/Pipeline/ID_EX_reg.sv RTL/Pipeline/IF_ID_reg.sv RTL/Pipeline/MEM_WB_reg.sv RTL/Register/Register.sv 
 # ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
-# -- Compiling package Control_sv_unit
+# -- Compiling package ALU_sv_unit
 # -- Importing package pkg
+# -- Compiling module ALU
+# -- Compiling package ALU_control_sv_unit
+# -- Compiling module ALU_control
+# -- Compiling module Branch_Target_Buffer
+# -- Compiling package Control_sv_unit
 # -- Compiling module Control
 # -- Compiling package RISC_V_pipe_line_sv_unit
 # -- Compiling module RISC_V_pipe_line
@@ -180,7 +226,6 @@ do run/run.tcl
 # -- Compiling module PC
 # -- Compiling package PC_next_sv_unit
 # -- Compiling module PC_next
-# -- Compiling module Branch_Target_Buffer
 # -- Compiling module EX_MEM_reg
 # -- Compiling module Forwarding_Unit
 # -- Compiling module Hazard_Detection_Unit
@@ -188,33 +233,27 @@ do run/run.tcl
 # -- Compiling module IF_ID_reg
 # -- Compiling module MEM_WB_reg
 # -- Compiling module Register
-# -- Compiling package ALU_sv_unit
-# -- Compiling module ALU
-# -- Compiling package ALU_control_sv_unit
-# -- Compiling module ALU_control
 # 
 # Top level modules:
 # 	RISC_V_pipe_line
 # 	Mux_WB
-# End time: 19:43:58 on Jun 20,2026, Elapsed time: 0:00:00
+# End time: 20:45:05 on Jun 29,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
-# Start time: 19:43:58 on Jun 20,2026
-# vlog -reportprogress 300 -sv Test_Bench/RISC_V_pipe_line_tb.sv Test_Bench/RISC_V_pipe_line_tb1.sv Test_Bench/RISC_V_single_cycle_tb.sv 
+# Start time: 20:45:05 on Jun 29,2026
+# vlog -reportprogress 300 -sv Test_Bench/RISC_V_pipe_line_tb.sv Test_Bench/RISC_V_pipe_line_tb1.sv 
 # ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
 # -- Compiling module RISC_V_pipe_line_tb
 # -- Compiling module RISC_V_pipe_line_tb1
-# -- Compiling module RISC_V_single_cycle_tb
 # 
 # Top level modules:
 # 	RISC_V_pipe_line_tb
 # 	RISC_V_pipe_line_tb1
-# 	RISC_V_single_cycle_tb
-# End time: 19:43:58 on Jun 20,2026, Elapsed time: 0:00:00
+# End time: 20:45:05 on Jun 29,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # ** Note: (vsim-220) 'modelsim.ini' is used as the ini file.
 # vsim -voptargs="+acc" work.RISC_V_pipe_line_tb 
-# Start time: 19:43:58 on Jun 20,2026
+# Start time: 20:45:05 on Jun 29,2026
 # ** Note: (vsim-3812) Design is being optimized...
 # ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
 # ** Note: (vopt-220) 'modelsim.ini' is used as the ini file.
@@ -253,15 +292,45 @@ do run/run.tcl
 #            STARTING PIPELINE SIMULATION                  
 # =========================================================
 # 
-# Time=0 | PC=0 | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
-# Time=50000 | PC=4 | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
-# Time=70000 | PC=8 | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
-# Time=90000 | PC=12 | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
-# Time=110000 | PC=16 | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
-# Time=130000 | PC=24 | a0(x10)=64 | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
-# Time=150000 | PC=28 | a0(x10)=64 | a1(x11)=3 | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
-# Time=170000 | PC=32 | a0(x10)=64 | a1(x11)=3 | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=12
-# Time=190000 | PC=36 | a0(x10)=64 | a1(x11)=3 | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=12
+# Time=0 | PC=0 | Instruct=04000513 | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=50000 | PC=4 | Instruct=00300593 | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=70000 | PC=8 | Instruct=010000ef | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=90000 | PC=12 | Instruct=00a03023 | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=110000 | PC=16 | Instruct=0000006f | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=130000 | PC=24 | Instruct=00000313 | a0(x10)=64 | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=150000 | PC=28 | Instruct=00b35c63 | a0(x10)=64 | a1(x11)=3 | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=170000 | PC=32 | Instruct=00053383 | a0(x10)=64 | a1(x11)=3 | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=12
+# Time=190000 | PC=36 | Instruct=007282b3 | a0(x10)=64 | a1(x11)=3 | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=12
+# Time=210000 | PC=40 | Instruct=00850513 | a0(x10)=64 | a1(x11)=3 | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=12
+# Time=230000 | PC=40 | Instruct=00850513 | a0(x10)=64 | a1(x11)=3 | t0(x5)=x | t1(x6)=0 | t2(x7)=x | ra(x1)=12
+# Time=250000 | PC=44 | Instruct=00130313 | a0(x10)=64 | a1(x11)=3 | t0(x5)=x | t1(x6)=0 | t2(x7)=x | ra(x1)=12
+# Time=270000 | PC=48 | Instruct=fedff06f | a0(x10)=64 | a1(x11)=3 | t0(x5)=x | t1(x6)=0 | t2(x7)=10 | ra(x1)=12
+# Time=290000 | PC=52 | Instruct=00500533 | a0(x10)=64 | a1(x11)=3 | t0(x5)=x | t1(x6)=0 | t2(x7)=10 | ra(x1)=12
+# Time=310000 | PC=56 | Instruct=00008067 | a0(x10)=64 | a1(x11)=3 | t0(x5)=x | t1(x6)=0 | t2(x7)=10 | ra(x1)=12
+# Time=330000 | PC=28 | Instruct=00b35c63 | a0(x10)=72 | a1(x11)=3 | t0(x5)=x | t1(x6)=0 | t2(x7)=10 | ra(x1)=12
+# Time=350000 | PC=32 | Instruct=00053383 | a0(x10)=72 | a1(x11)=3 | t0(x5)=x | t1(x6)=1 | t2(x7)=10 | ra(x1)=12
+# Time=370000 | PC=36 | Instruct=007282b3 | a0(x10)=72 | a1(x11)=3 | t0(x5)=x | t1(x6)=1 | t2(x7)=10 | ra(x1)=12
+# Time=390000 | PC=40 | Instruct=00850513 | a0(x10)=72 | a1(x11)=3 | t0(x5)=x | t1(x6)=1 | t2(x7)=10 | ra(x1)=12
+# Time=430000 | PC=44 | Instruct=00130313 | a0(x10)=72 | a1(x11)=3 | t0(x5)=x | t1(x6)=1 | t2(x7)=10 | ra(x1)=12
+# Time=450000 | PC=48 | Instruct=fedff06f | a0(x10)=72 | a1(x11)=3 | t0(x5)=x | t1(x6)=1 | t2(x7)=20 | ra(x1)=12
+# Time=470000 | PC=28 | Instruct=00b35c63 | a0(x10)=72 | a1(x11)=3 | t0(x5)=x | t1(x6)=1 | t2(x7)=20 | ra(x1)=12
+# Time=490000 | PC=32 | Instruct=00053383 | a0(x10)=72 | a1(x11)=3 | t0(x5)=x | t1(x6)=1 | t2(x7)=20 | ra(x1)=12
+# Time=510000 | PC=36 | Instruct=007282b3 | a0(x10)=80 | a1(x11)=3 | t0(x5)=x | t1(x6)=1 | t2(x7)=20 | ra(x1)=12
+# Time=530000 | PC=40 | Instruct=00850513 | a0(x10)=80 | a1(x11)=3 | t0(x5)=x | t1(x6)=2 | t2(x7)=20 | ra(x1)=12
+# Time=570000 | PC=44 | Instruct=00130313 | a0(x10)=80 | a1(x11)=3 | t0(x5)=x | t1(x6)=2 | t2(x7)=20 | ra(x1)=12
+# Time=590000 | PC=48 | Instruct=fedff06f | a0(x10)=80 | a1(x11)=3 | t0(x5)=x | t1(x6)=2 | t2(x7)=30 | ra(x1)=12
+# Time=610000 | PC=28 | Instruct=00b35c63 | a0(x10)=80 | a1(x11)=3 | t0(x5)=x | t1(x6)=2 | t2(x7)=30 | ra(x1)=12
+# Time=630000 | PC=32 | Instruct=00053383 | a0(x10)=80 | a1(x11)=3 | t0(x5)=x | t1(x6)=2 | t2(x7)=30 | ra(x1)=12
+# Time=650000 | PC=36 | Instruct=007282b3 | a0(x10)=88 | a1(x11)=3 | t0(x5)=x | t1(x6)=2 | t2(x7)=30 | ra(x1)=12
+# Time=670000 | PC=52 | Instruct=00500533 | a0(x10)=88 | a1(x11)=3 | t0(x5)=x | t1(x6)=3 | t2(x7)=30 | ra(x1)=12
+# Time=690000 | PC=56 | Instruct=00008067 | a0(x10)=88 | a1(x11)=3 | t0(x5)=x | t1(x6)=3 | t2(x7)=30 | ra(x1)=12
+# Time=710000 | PC=60 | Instruct=xxxxxxxx | a0(x10)=88 | a1(x11)=3 | t0(x5)=x | t1(x6)=3 | t2(x7)=30 | ra(x1)=12
+# Time=730000 | PC=64 | Instruct=xxxxxxxx | a0(x10)=88 | a1(x11)=3 | t0(x5)=x | t1(x6)=3 | t2(x7)=30 | ra(x1)=12
+# Time=750000 | PC=12 | Instruct=00a03023 | a0(x10)=88 | a1(x11)=3 | t0(x5)=x | t1(x6)=3 | t2(x7)=30 | ra(x1)=12
+# Time=770000 | PC=16 | Instruct=0000006f | a0(x10)=x | a1(x11)=3 | t0(x5)=x | t1(x6)=3 | t2(x7)=30 | ra(x1)=12
+# Time=790000 | PC=20 | Instruct=00000293 | a0(x10)=x | a1(x11)=3 | t0(x5)=x | t1(x6)=3 | t2(x7)=30 | ra(x1)=12
+# Time=810000 | PC=24 | Instruct=00000313 | a0(x10)=x | a1(x11)=3 | t0(x5)=x | t1(x6)=3 | t2(x7)=30 | ra(x1)=12
+# Time=830000 | PC=16 | Instruct=0000006f | a0(x10)=x | a1(x11)=3 | t0(x5)=x | t1(x6)=3 | t2(x7)=30 | ra(x1)=12
 # 
 # =======================================================
 #                   SELF-TEST RESULTS                      
@@ -271,34 +340,39 @@ do run/run.tcl
 # =======================================================
 # 
 # ** Note: $finish    : Test_Bench/RISC_V_pipe_line_tb.sv(63)
-#    Time: 210 ns  Iteration: 0  Instance: /RISC_V_pipe_line_tb
+#    Time: 1110 ns  Iteration: 0  Instance: /RISC_V_pipe_line_tb
 # 1
 # Break in Module RISC_V_pipe_line_tb at Test_Bench/RISC_V_pipe_line_tb.sv line 63
 # 0 ps
-# 220500 ps
+# 1165500 ps
 do run/run.tcl
-# End time: 19:45:05 on Jun 20,2026, Elapsed time: 0:01:07
+# End time: 20:52:45 on Jun 29,2026, Elapsed time: 0:07:40
 # Errors: 0, Warnings: 1
 # Questa Altera Starter FPGA Edition-64 vmap 2025.2 Lib Mapping Utility 2025.05 May 31 2025
 # vmap work work 
 # ** Note: (vmap-220) 'modelsim.ini' is used as the ini file.
 # Modifying modelsim.ini
 # Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
-# Start time: 19:45:05 on Jun 20,2026
+# Start time: 20:52:45 on Jun 29,2026
 # vlog -reportprogress 300 -sv RTL/Design/pkg.sv 
 # ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
 # -- Compiling package pkg
 # 
 # Top level modules:
 # 	--none--
-# End time: 19:45:05 on Jun 20,2026, Elapsed time: 0:00:00
+# End time: 20:52:46 on Jun 29,2026, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
-# Start time: 19:45:05 on Jun 20,2026
-# vlog -reportprogress 300 -sv RTL/CtrlUnit/Control.sv RTL/Design/RISC_V_pipe_line.sv RTL/Design/pkg.sv RTL/ImmGen/ImmGen.sv RTL/MUX/MUX_2_1.sv RTL/MUX/Mux_WB.sv RTL/Memory/DMEM.sv RTL/Memory/IMEM.sv RTL/PC/PC.sv RTL/PC/PC_next.sv RTL/Pipeline/Branch_Target_Buffer.sv RTL/Pipeline/EX_MEM_reg.sv RTL/Pipeline/Forwarding_Unit.sv RTL/Pipeline/Hazard_Detection_Unit.sv RTL/Pipeline/ID_EX_reg.sv RTL/Pipeline/IF_ID_reg.sv RTL/Pipeline/MEM_WB_reg.sv RTL/Register/Register.sv RTL/design/ALU.sv RTL/design/ALU_control.sv 
+# Start time: 20:52:46 on Jun 29,2026
+# vlog -reportprogress 300 -sv RTL/ALU/ALU.sv RTL/ALU/ALU_control.sv RTL/BTB/Branch_Target_Buffer.sv RTL/CtrlUnit/Control.sv RTL/Design/RISC_V_pipe_line.sv RTL/Design/pkg.sv RTL/ImmGen/ImmGen.sv RTL/MUX/MUX_2_1.sv RTL/MUX/Mux_WB.sv RTL/Memory/DMEM.sv RTL/Memory/IMEM.sv RTL/PC/PC.sv RTL/PC/PC_next.sv RTL/Pipeline/EX_MEM_reg.sv RTL/Pipeline/Forwarding_Unit.sv RTL/Pipeline/Hazard_Detection_Unit.sv RTL/Pipeline/ID_EX_reg.sv RTL/Pipeline/IF_ID_reg.sv RTL/Pipeline/MEM_WB_reg.sv RTL/Register/Register.sv 
 # ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
-# -- Compiling package Control_sv_unit
+# -- Compiling package ALU_sv_unit
 # -- Importing package pkg
+# -- Compiling module ALU
+# -- Compiling package ALU_control_sv_unit
+# -- Compiling module ALU_control
+# -- Compiling module Branch_Target_Buffer
+# -- Compiling package Control_sv_unit
 # -- Compiling module Control
 # -- Compiling package RISC_V_pipe_line_sv_unit
 # -- Compiling module RISC_V_pipe_line
@@ -312,7 +386,6 @@ do run/run.tcl
 # -- Compiling module PC
 # -- Compiling package PC_next_sv_unit
 # -- Compiling module PC_next
-# -- Compiling module Branch_Target_Buffer
 # -- Compiling module EX_MEM_reg
 # -- Compiling module Forwarding_Unit
 # -- Compiling module Hazard_Detection_Unit
@@ -320,115 +393,27 @@ do run/run.tcl
 # -- Compiling module IF_ID_reg
 # -- Compiling module MEM_WB_reg
 # -- Compiling module Register
-# -- Compiling package ALU_sv_unit
-# -- Compiling module ALU
-# -- Compiling package ALU_control_sv_unit
-# -- Compiling module ALU_control
 # 
 # Top level modules:
 # 	RISC_V_pipe_line
 # 	Mux_WB
-# End time: 19:45:05 on Jun 20,2026, Elapsed time: 0:00:00
+# End time: 20:52:46 on Jun 29,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
-# Start time: 19:45:05 on Jun 20,2026
-# vlog -reportprogress 300 -sv Test_Bench/RISC_V_pipe_line_tb.sv Test_Bench/RISC_V_pipe_line_tb1.sv Test_Bench/RISC_V_single_cycle_tb.sv 
+# Start time: 20:52:46 on Jun 29,2026
+# vlog -reportprogress 300 -sv Test_Bench/RISC_V_pipe_line_tb.sv Test_Bench/RISC_V_pipe_line_tb1.sv 
 # ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
 # -- Compiling module RISC_V_pipe_line_tb
 # -- Compiling module RISC_V_pipe_line_tb1
-# -- Compiling module RISC_V_single_cycle_tb
 # 
 # Top level modules:
 # 	RISC_V_pipe_line_tb
 # 	RISC_V_pipe_line_tb1
-# 	RISC_V_single_cycle_tb
-# End time: 19:45:05 on Jun 20,2026, Elapsed time: 0:00:00
+# End time: 20:52:46 on Jun 29,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # ** Note: (vsim-220) 'modelsim.ini' is used as the ini file.
 # vsim -voptargs="+acc" work.RISC_V_pipe_line_tb 
-# Start time: 19:45:05 on Jun 20,2026
-# ** Note: (vsim-3812) Design is being optimized...
-# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
-# ** Note: (vopt-220) 'modelsim.ini' is used as the ini file.
-# ** Error (suppressible): RTL/Memory/DMEM.sv(25): (vopt-7061) Variable 'memory' driven in an always_ff block, may not be driven by any other process. See RTL/Memory/DMEM.sv(15).
-# Optimization failed
-# ** Error: (vopt-2064) Compiler back-end code generation process terminated due to previous errors with code 12.
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=2, Warnings=1.
-# Error loading design
-# Error: Error loading design
-#        Pausing macro execution
-# MACRO ./run/run.tcl PAUSED at line 15
-do run/run.tcl
-# End time: 19:46:11 on Jun 20,2026, Elapsed time: 0:01:06
-# Errors: 2, Warnings: 1
-# Questa Altera Starter FPGA Edition-64 vmap 2025.2 Lib Mapping Utility 2025.05 May 31 2025
-# vmap work work 
-# ** Note: (vmap-220) 'modelsim.ini' is used as the ini file.
-# Modifying modelsim.ini
-# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
-# Start time: 19:46:11 on Jun 20,2026
-# vlog -reportprogress 300 -sv RTL/Design/pkg.sv 
-# ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
-# -- Compiling package pkg
-# 
-# Top level modules:
-# 	--none--
-# End time: 19:46:11 on Jun 20,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
-# Start time: 19:46:11 on Jun 20,2026
-# vlog -reportprogress 300 -sv RTL/CtrlUnit/Control.sv RTL/Design/RISC_V_pipe_line.sv RTL/Design/pkg.sv RTL/ImmGen/ImmGen.sv RTL/MUX/MUX_2_1.sv RTL/MUX/Mux_WB.sv RTL/Memory/DMEM.sv RTL/Memory/IMEM.sv RTL/PC/PC.sv RTL/PC/PC_next.sv RTL/Pipeline/Branch_Target_Buffer.sv RTL/Pipeline/EX_MEM_reg.sv RTL/Pipeline/Forwarding_Unit.sv RTL/Pipeline/Hazard_Detection_Unit.sv RTL/Pipeline/ID_EX_reg.sv RTL/Pipeline/IF_ID_reg.sv RTL/Pipeline/MEM_WB_reg.sv RTL/Register/Register.sv RTL/design/ALU.sv RTL/design/ALU_control.sv 
-# ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
-# -- Compiling package Control_sv_unit
-# -- Importing package pkg
-# -- Compiling module Control
-# -- Compiling package RISC_V_pipe_line_sv_unit
-# -- Compiling module RISC_V_pipe_line
-# -- Compiling package pkg
-# -- Compiling package ImmGen_sv_unit
-# -- Compiling module ImmGen
-# -- Compiling module MUX_2_1
-# -- Compiling module Mux_WB
-# -- Compiling module DMEM
-# -- Compiling module IMEM
-# -- Compiling module PC
-# -- Compiling package PC_next_sv_unit
-# -- Compiling module PC_next
-# -- Compiling module Branch_Target_Buffer
-# -- Compiling module EX_MEM_reg
-# -- Compiling module Forwarding_Unit
-# -- Compiling module Hazard_Detection_Unit
-# -- Compiling module ID_EX_reg
-# -- Compiling module IF_ID_reg
-# -- Compiling module MEM_WB_reg
-# -- Compiling module Register
-# -- Compiling package ALU_sv_unit
-# -- Compiling module ALU
-# -- Compiling package ALU_control_sv_unit
-# -- Compiling module ALU_control
-# 
-# Top level modules:
-# 	RISC_V_pipe_line
-# 	Mux_WB
-# End time: 19:46:11 on Jun 20,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
-# Start time: 19:46:11 on Jun 20,2026
-# vlog -reportprogress 300 -sv Test_Bench/RISC_V_pipe_line_tb.sv Test_Bench/RISC_V_pipe_line_tb1.sv Test_Bench/RISC_V_single_cycle_tb.sv 
-# ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
-# -- Compiling module RISC_V_pipe_line_tb
-# -- Compiling module RISC_V_pipe_line_tb1
-# -- Compiling module RISC_V_single_cycle_tb
-# 
-# Top level modules:
-# 	RISC_V_pipe_line_tb
-# 	RISC_V_pipe_line_tb1
-# 	RISC_V_single_cycle_tb
-# End time: 19:46:11 on Jun 20,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# ** Note: (vsim-220) 'modelsim.ini' is used as the ini file.
-# vsim -voptargs="+acc" work.RISC_V_pipe_line_tb 
-# Start time: 19:46:11 on Jun 20,2026
+# Start time: 20:52:46 on Jun 29,2026
 # ** Note: (vsim-3812) Design is being optimized...
 # ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
 # ** Note: (vopt-220) 'modelsim.ini' is used as the ini file.
@@ -467,178 +452,46 @@ do run/run.tcl
 #            STARTING PIPELINE SIMULATION                  
 # =========================================================
 # 
-# Time=0 | PC=0 | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
-# Time=50000 | PC=4 | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
-# Time=70000 | PC=8 | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
-# Time=90000 | PC=12 | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
-# Time=110000 | PC=16 | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
-# Time=130000 | PC=24 | a0(x10)=64 | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
-# Time=150000 | PC=28 | a0(x10)=64 | a1(x11)=3 | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
-# Time=170000 | PC=32 | a0(x10)=64 | a1(x11)=3 | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=12
-# Time=190000 | PC=36 | a0(x10)=64 | a1(x11)=3 | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=12
-# 
-# =======================================================
-#                   SELF-TEST RESULTS                      
-# =======================================================
-# Array sum at DMEM[0] = x (Expected = 60)
-# >>> STATUS: [ FAILED ] - Results mismatch! Check Hazards/Forwarding!
-# =======================================================
-# 
-# ** Note: $finish    : Test_Bench/RISC_V_pipe_line_tb.sv(63)
-#    Time: 210 ns  Iteration: 0  Instance: /RISC_V_pipe_line_tb
-# 1
-# Break in Module RISC_V_pipe_line_tb at Test_Bench/RISC_V_pipe_line_tb.sv line 63
-# 0 ps
-# 220500 ps
-do run/run.tcl
-# End time: 19:48:47 on Jun 20,2026, Elapsed time: 0:02:36
-# Errors: 0, Warnings: 1
-# Questa Altera Starter FPGA Edition-64 vmap 2025.2 Lib Mapping Utility 2025.05 May 31 2025
-# vmap work work 
-# ** Note: (vmap-220) 'modelsim.ini' is used as the ini file.
-# Modifying modelsim.ini
-# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
-# Start time: 19:48:47 on Jun 20,2026
-# vlog -reportprogress 300 -sv RTL/Design/pkg.sv 
-# ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
-# -- Compiling package pkg
-# 
-# Top level modules:
-# 	--none--
-# End time: 19:48:47 on Jun 20,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
-# Start time: 19:48:47 on Jun 20,2026
-# vlog -reportprogress 300 -sv RTL/CtrlUnit/Control.sv RTL/Design/RISC_V_pipe_line.sv RTL/Design/pkg.sv RTL/ImmGen/ImmGen.sv RTL/MUX/MUX_2_1.sv RTL/MUX/Mux_WB.sv RTL/Memory/DMEM.sv RTL/Memory/IMEM.sv RTL/PC/PC.sv RTL/PC/PC_next.sv RTL/Pipeline/Branch_Target_Buffer.sv RTL/Pipeline/EX_MEM_reg.sv RTL/Pipeline/Forwarding_Unit.sv RTL/Pipeline/Hazard_Detection_Unit.sv RTL/Pipeline/ID_EX_reg.sv RTL/Pipeline/IF_ID_reg.sv RTL/Pipeline/MEM_WB_reg.sv RTL/Register/Register.sv RTL/design/ALU.sv RTL/design/ALU_control.sv 
-# ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
-# -- Compiling package Control_sv_unit
-# -- Importing package pkg
-# -- Compiling module Control
-# -- Compiling package RISC_V_pipe_line_sv_unit
-# -- Compiling module RISC_V_pipe_line
-# -- Compiling package pkg
-# -- Compiling package ImmGen_sv_unit
-# -- Compiling module ImmGen
-# -- Compiling module MUX_2_1
-# -- Compiling module Mux_WB
-# -- Compiling module DMEM
-# -- Compiling module IMEM
-# -- Compiling module PC
-# -- Compiling package PC_next_sv_unit
-# -- Compiling module PC_next
-# -- Compiling module Branch_Target_Buffer
-# -- Compiling module EX_MEM_reg
-# -- Compiling module Forwarding_Unit
-# -- Compiling module Hazard_Detection_Unit
-# -- Compiling module ID_EX_reg
-# -- Compiling module IF_ID_reg
-# -- Compiling module MEM_WB_reg
-# -- Compiling module Register
-# -- Compiling package ALU_sv_unit
-# -- Compiling module ALU
-# -- Compiling package ALU_control_sv_unit
-# -- Compiling module ALU_control
-# 
-# Top level modules:
-# 	RISC_V_pipe_line
-# 	Mux_WB
-# End time: 19:48:47 on Jun 20,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
-# Start time: 19:48:47 on Jun 20,2026
-# vlog -reportprogress 300 -sv Test_Bench/RISC_V_pipe_line_tb.sv Test_Bench/RISC_V_pipe_line_tb1.sv Test_Bench/RISC_V_single_cycle_tb.sv 
-# ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
-# -- Compiling module RISC_V_pipe_line_tb
-# -- Compiling module RISC_V_pipe_line_tb1
-# -- Compiling module RISC_V_single_cycle_tb
-# 
-# Top level modules:
-# 	RISC_V_pipe_line_tb
-# 	RISC_V_pipe_line_tb1
-# 	RISC_V_single_cycle_tb
-# End time: 19:48:47 on Jun 20,2026, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# ** Note: (vsim-220) 'modelsim.ini' is used as the ini file.
-# vsim -voptargs="+acc" work.RISC_V_pipe_line_tb 
-# Start time: 19:48:47 on Jun 20,2026
-# ** Note: (vsim-3812) Design is being optimized...
-# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
-# ** Note: (vopt-220) 'modelsim.ini' is used as the ini file.
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
-# Loading sv_std.std
-# Loading work.RISC_V_pipe_line_tb(fast)
-# Loading work.pkg(fast)
-# Loading work.RISC_V_pipe_line_sv_unit(fast)
-# Loading work.RISC_V_pipe_line(fast)
-# Loading work.PC(fast)
-# Loading work.Branch_Target_Buffer(fast)
-# Loading work.IMEM(fast)
-# Loading work.IF_ID_reg(fast)
-# Loading work.Register(fast)
-# Loading work.ImmGen_sv_unit(fast)
-# Loading work.ImmGen(fast)
-# Loading work.Control_sv_unit(fast)
-# Loading work.Control(fast)
-# Loading work.ID_EX_reg(fast)
-# Loading work.MUX_2_1(fast)
-# Loading work.ALU_control_sv_unit(fast)
-# Loading work.ALU_control(fast)
-# Loading work.ALU_sv_unit(fast)
-# Loading work.ALU(fast)
-# Loading work.PC_next_sv_unit(fast)
-# Loading work.PC_next(fast)
-# Loading work.EX_MEM_reg(fast)
-# Loading work.DMEM(fast)
-# Loading work.MEM_WB_reg(fast)
-# Loading work.Hazard_Detection_Unit(fast)
-# Loading work.Forwarding_Unit(fast)
-# .main_pane.structure.interior.cs.body.struct
-# .main_pane.objects.interior.cs.body.tree
-# .main_pane.wave.interior.cs.body.pw.wf
-# =========================================================
-#            STARTING PIPELINE SIMULATION                  
-# =========================================================
-# 
-# Time=0 | PC=0 | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
-# Time=50000 | PC=4 | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
-# Time=70000 | PC=8 | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
-# Time=90000 | PC=12 | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
-# Time=110000 | PC=16 | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
-# Time=130000 | PC=24 | a0(x10)=64 | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
-# Time=150000 | PC=28 | a0(x10)=64 | a1(x11)=3 | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
-# Time=170000 | PC=32 | a0(x10)=64 | a1(x11)=3 | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=12
-# Time=190000 | PC=36 | a0(x10)=64 | a1(x11)=3 | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=12
-# Time=210000 | PC=40 | a0(x10)=64 | a1(x11)=3 | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=12
-# Time=230000 | PC=44 | a0(x10)=64 | a1(x11)=3 | t0(x5)=0 | t1(x6)=x | t2(x7)=x | ra(x1)=12
-# Time=250000 | PC=44 | a0(x10)=64 | a1(x11)=3 | t0(x5)=0 | t1(x6)=0 | t2(x7)=x | ra(x1)=12
-# Time=270000 | PC=48 | a0(x10)=64 | a1(x11)=3 | t0(x5)=0 | t1(x6)=0 | t2(x7)=x | ra(x1)=12
-# Time=290000 | PC=52 | a0(x10)=64 | a1(x11)=3 | t0(x5)=0 | t1(x6)=0 | t2(x7)=10 | ra(x1)=12
-# Time=310000 | PC=56 | a0(x10)=64 | a1(x11)=3 | t0(x5)=0 | t1(x6)=0 | t2(x7)=10 | ra(x1)=12
-# Time=330000 | PC=60 | a0(x10)=64 | a1(x11)=3 | t0(x5)=10 | t1(x6)=0 | t2(x7)=10 | ra(x1)=12
-# Time=350000 | PC=32 | a0(x10)=72 | a1(x11)=3 | t0(x5)=10 | t1(x6)=0 | t2(x7)=10 | ra(x1)=12
-# Time=370000 | PC=36 | a0(x10)=72 | a1(x11)=3 | t0(x5)=10 | t1(x6)=1 | t2(x7)=10 | ra(x1)=12
-# Time=390000 | PC=40 | a0(x10)=72 | a1(x11)=3 | t0(x5)=10 | t1(x6)=1 | t2(x7)=10 | ra(x1)=12
-# Time=410000 | PC=44 | a0(x10)=72 | a1(x11)=3 | t0(x5)=10 | t1(x6)=1 | t2(x7)=10 | ra(x1)=12
-# Time=450000 | PC=48 | a0(x10)=72 | a1(x11)=3 | t0(x5)=10 | t1(x6)=1 | t2(x7)=10 | ra(x1)=12
-# Time=470000 | PC=52 | a0(x10)=72 | a1(x11)=3 | t0(x5)=10 | t1(x6)=1 | t2(x7)=20 | ra(x1)=12
-# Time=490000 | PC=32 | a0(x10)=72 | a1(x11)=3 | t0(x5)=10 | t1(x6)=1 | t2(x7)=20 | ra(x1)=12
-# Time=510000 | PC=36 | a0(x10)=72 | a1(x11)=3 | t0(x5)=30 | t1(x6)=1 | t2(x7)=20 | ra(x1)=12
-# Time=530000 | PC=40 | a0(x10)=80 | a1(x11)=3 | t0(x5)=30 | t1(x6)=1 | t2(x7)=20 | ra(x1)=12
-# Time=550000 | PC=44 | a0(x10)=80 | a1(x11)=3 | t0(x5)=30 | t1(x6)=2 | t2(x7)=20 | ra(x1)=12
-# Time=590000 | PC=48 | a0(x10)=80 | a1(x11)=3 | t0(x5)=30 | t1(x6)=2 | t2(x7)=20 | ra(x1)=12
-# Time=610000 | PC=52 | a0(x10)=80 | a1(x11)=3 | t0(x5)=30 | t1(x6)=2 | t2(x7)=30 | ra(x1)=12
-# Time=630000 | PC=32 | a0(x10)=80 | a1(x11)=3 | t0(x5)=30 | t1(x6)=2 | t2(x7)=30 | ra(x1)=12
-# Time=650000 | PC=36 | a0(x10)=80 | a1(x11)=3 | t0(x5)=60 | t1(x6)=2 | t2(x7)=30 | ra(x1)=12
-# Time=670000 | PC=40 | a0(x10)=88 | a1(x11)=3 | t0(x5)=60 | t1(x6)=2 | t2(x7)=30 | ra(x1)=12
-# Time=690000 | PC=56 | a0(x10)=88 | a1(x11)=3 | t0(x5)=60 | t1(x6)=3 | t2(x7)=30 | ra(x1)=12
-# Time=710000 | PC=60 | a0(x10)=88 | a1(x11)=3 | t0(x5)=60 | t1(x6)=3 | t2(x7)=30 | ra(x1)=12
-# Time=730000 | PC=64 | a0(x10)=88 | a1(x11)=3 | t0(x5)=60 | t1(x6)=3 | t2(x7)=30 | ra(x1)=12
-# Time=750000 | PC=68 | a0(x10)=88 | a1(x11)=3 | t0(x5)=60 | t1(x6)=3 | t2(x7)=30 | ra(x1)=12
-# Time=770000 | PC=12 | a0(x10)=88 | a1(x11)=3 | t0(x5)=60 | t1(x6)=3 | t2(x7)=30 | ra(x1)=12
-# Time=790000 | PC=16 | a0(x10)=60 | a1(x11)=3 | t0(x5)=60 | t1(x6)=3 | t2(x7)=30 | ra(x1)=12
-# Time=810000 | PC=20 | a0(x10)=60 | a1(x11)=3 | t0(x5)=60 | t1(x6)=3 | t2(x7)=30 | ra(x1)=12
-# Time=830000 | PC=24 | a0(x10)=60 | a1(x11)=3 | t0(x5)=60 | t1(x6)=3 | t2(x7)=30 | ra(x1)=12
-# Time=850000 | PC=16 | a0(x10)=60 | a1(x11)=3 | t0(x5)=60 | t1(x6)=3 | t2(x7)=30 | ra(x1)=12
+# Time=0 | PC=0 | Instruct=04000513 | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=50000 | PC=4 | Instruct=00300593 | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=70000 | PC=8 | Instruct=00c000ef | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=90000 | PC=12 | Instruct=00a03023 | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=110000 | PC=16 | Instruct=0000006f | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=130000 | PC=20 | Instruct=00000293 | a0(x10)=64 | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=150000 | PC=24 | Instruct=00000313 | a0(x10)=64 | a1(x11)=3 | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=170000 | PC=28 | Instruct=00b35c63 | a0(x10)=64 | a1(x11)=3 | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=12
+# Time=190000 | PC=32 | Instruct=00053383 | a0(x10)=64 | a1(x11)=3 | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=12
+# Time=210000 | PC=36 | Instruct=007282b3 | a0(x10)=64 | a1(x11)=3 | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=12
+# Time=230000 | PC=40 | Instruct=00850513 | a0(x10)=64 | a1(x11)=3 | t0(x5)=0 | t1(x6)=x | t2(x7)=x | ra(x1)=12
+# Time=250000 | PC=40 | Instruct=00850513 | a0(x10)=64 | a1(x11)=3 | t0(x5)=0 | t1(x6)=0 | t2(x7)=x | ra(x1)=12
+# Time=270000 | PC=44 | Instruct=00130313 | a0(x10)=64 | a1(x11)=3 | t0(x5)=0 | t1(x6)=0 | t2(x7)=x | ra(x1)=12
+# Time=290000 | PC=48 | Instruct=fedff06f | a0(x10)=64 | a1(x11)=3 | t0(x5)=0 | t1(x6)=0 | t2(x7)=10 | ra(x1)=12
+# Time=310000 | PC=52 | Instruct=00500533 | a0(x10)=64 | a1(x11)=3 | t0(x5)=0 | t1(x6)=0 | t2(x7)=10 | ra(x1)=12
+# Time=330000 | PC=56 | Instruct=00008067 | a0(x10)=64 | a1(x11)=3 | t0(x5)=10 | t1(x6)=0 | t2(x7)=10 | ra(x1)=12
+# Time=350000 | PC=28 | Instruct=00b35c63 | a0(x10)=72 | a1(x11)=3 | t0(x5)=10 | t1(x6)=0 | t2(x7)=10 | ra(x1)=12
+# Time=370000 | PC=32 | Instruct=00053383 | a0(x10)=72 | a1(x11)=3 | t0(x5)=10 | t1(x6)=1 | t2(x7)=10 | ra(x1)=12
+# Time=390000 | PC=36 | Instruct=007282b3 | a0(x10)=72 | a1(x11)=3 | t0(x5)=10 | t1(x6)=1 | t2(x7)=10 | ra(x1)=12
+# Time=410000 | PC=40 | Instruct=00850513 | a0(x10)=72 | a1(x11)=3 | t0(x5)=10 | t1(x6)=1 | t2(x7)=10 | ra(x1)=12
+# Time=450000 | PC=44 | Instruct=00130313 | a0(x10)=72 | a1(x11)=3 | t0(x5)=10 | t1(x6)=1 | t2(x7)=10 | ra(x1)=12
+# Time=470000 | PC=48 | Instruct=fedff06f | a0(x10)=72 | a1(x11)=3 | t0(x5)=10 | t1(x6)=1 | t2(x7)=20 | ra(x1)=12
+# Time=490000 | PC=28 | Instruct=00b35c63 | a0(x10)=72 | a1(x11)=3 | t0(x5)=10 | t1(x6)=1 | t2(x7)=20 | ra(x1)=12
+# Time=510000 | PC=32 | Instruct=00053383 | a0(x10)=72 | a1(x11)=3 | t0(x5)=30 | t1(x6)=1 | t2(x7)=20 | ra(x1)=12
+# Time=530000 | PC=36 | Instruct=007282b3 | a0(x10)=80 | a1(x11)=3 | t0(x5)=30 | t1(x6)=1 | t2(x7)=20 | ra(x1)=12
+# Time=550000 | PC=40 | Instruct=00850513 | a0(x10)=80 | a1(x11)=3 | t0(x5)=30 | t1(x6)=2 | t2(x7)=20 | ra(x1)=12
+# Time=590000 | PC=44 | Instruct=00130313 | a0(x10)=80 | a1(x11)=3 | t0(x5)=30 | t1(x6)=2 | t2(x7)=20 | ra(x1)=12
+# Time=610000 | PC=48 | Instruct=fedff06f | a0(x10)=80 | a1(x11)=3 | t0(x5)=30 | t1(x6)=2 | t2(x7)=30 | ra(x1)=12
+# Time=630000 | PC=28 | Instruct=00b35c63 | a0(x10)=80 | a1(x11)=3 | t0(x5)=30 | t1(x6)=2 | t2(x7)=30 | ra(x1)=12
+# Time=650000 | PC=32 | Instruct=00053383 | a0(x10)=80 | a1(x11)=3 | t0(x5)=60 | t1(x6)=2 | t2(x7)=30 | ra(x1)=12
+# Time=670000 | PC=36 | Instruct=007282b3 | a0(x10)=88 | a1(x11)=3 | t0(x5)=60 | t1(x6)=2 | t2(x7)=30 | ra(x1)=12
+# Time=690000 | PC=52 | Instruct=00500533 | a0(x10)=88 | a1(x11)=3 | t0(x5)=60 | t1(x6)=3 | t2(x7)=30 | ra(x1)=12
+# Time=710000 | PC=56 | Instruct=00008067 | a0(x10)=88 | a1(x11)=3 | t0(x5)=60 | t1(x6)=3 | t2(x7)=30 | ra(x1)=12
+# Time=730000 | PC=60 | Instruct=xxxxxxxx | a0(x10)=88 | a1(x11)=3 | t0(x5)=60 | t1(x6)=3 | t2(x7)=30 | ra(x1)=12
+# Time=750000 | PC=64 | Instruct=xxxxxxxx | a0(x10)=88 | a1(x11)=3 | t0(x5)=60 | t1(x6)=3 | t2(x7)=30 | ra(x1)=12
+# Time=770000 | PC=12 | Instruct=00a03023 | a0(x10)=88 | a1(x11)=3 | t0(x5)=60 | t1(x6)=3 | t2(x7)=30 | ra(x1)=12
+# Time=790000 | PC=16 | Instruct=0000006f | a0(x10)=60 | a1(x11)=3 | t0(x5)=60 | t1(x6)=3 | t2(x7)=30 | ra(x1)=12
+# Time=810000 | PC=20 | Instruct=00000293 | a0(x10)=60 | a1(x11)=3 | t0(x5)=60 | t1(x6)=3 | t2(x7)=30 | ra(x1)=12
+# Time=830000 | PC=24 | Instruct=00000313 | a0(x10)=60 | a1(x11)=3 | t0(x5)=60 | t1(x6)=3 | t2(x7)=30 | ra(x1)=12
+# Time=850000 | PC=16 | Instruct=0000006f | a0(x10)=60 | a1(x11)=3 | t0(x5)=60 | t1(x6)=3 | t2(x7)=30 | ra(x1)=12
 # 
 # =======================================================
 #                   SELF-TEST RESULTS                      
@@ -648,8 +501,171 @@ do run/run.tcl
 # =======================================================
 # 
 # ** Note: $finish    : Test_Bench/RISC_V_pipe_line_tb.sv(63)
-#    Time: 2110 ns  Iteration: 0  Instance: /RISC_V_pipe_line_tb
+#    Time: 1110 ns  Iteration: 0  Instance: /RISC_V_pipe_line_tb
 # 1
 # Break in Module RISC_V_pipe_line_tb at Test_Bench/RISC_V_pipe_line_tb.sv line 63
 # 0 ps
-# 2215500 ps
+# 1165500 ps
+do run/run.tcl
+# End time: 20:53:34 on Jun 29,2026, Elapsed time: 0:00:48
+# Errors: 0, Warnings: 1
+# Questa Altera Starter FPGA Edition-64 vmap 2025.2 Lib Mapping Utility 2025.05 May 31 2025
+# vmap work work 
+# ** Note: (vmap-220) 'modelsim.ini' is used as the ini file.
+# Modifying modelsim.ini
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 20:53:34 on Jun 29,2026
+# vlog -reportprogress 300 -sv RTL/Design/pkg.sv 
+# ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
+# -- Compiling package pkg
+# 
+# Top level modules:
+# 	--none--
+# End time: 20:53:34 on Jun 29,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 20:53:34 on Jun 29,2026
+# vlog -reportprogress 300 -sv RTL/ALU/ALU.sv RTL/ALU/ALU_control.sv RTL/BTB/Branch_Target_Buffer.sv RTL/CtrlUnit/Control.sv RTL/Design/RISC_V_pipe_line.sv RTL/Design/pkg.sv RTL/ImmGen/ImmGen.sv RTL/MUX/MUX_2_1.sv RTL/MUX/Mux_WB.sv RTL/Memory/DMEM.sv RTL/Memory/IMEM.sv RTL/PC/PC.sv RTL/PC/PC_next.sv RTL/Pipeline/EX_MEM_reg.sv RTL/Pipeline/Forwarding_Unit.sv RTL/Pipeline/Hazard_Detection_Unit.sv RTL/Pipeline/ID_EX_reg.sv RTL/Pipeline/IF_ID_reg.sv RTL/Pipeline/MEM_WB_reg.sv RTL/Register/Register.sv 
+# ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
+# -- Compiling package ALU_sv_unit
+# -- Importing package pkg
+# -- Compiling module ALU
+# -- Compiling package ALU_control_sv_unit
+# -- Compiling module ALU_control
+# -- Compiling module Branch_Target_Buffer
+# -- Compiling package Control_sv_unit
+# -- Compiling module Control
+# -- Compiling package RISC_V_pipe_line_sv_unit
+# -- Compiling module RISC_V_pipe_line
+# -- Compiling package pkg
+# -- Compiling package ImmGen_sv_unit
+# -- Compiling module ImmGen
+# -- Compiling module MUX_2_1
+# -- Compiling module Mux_WB
+# -- Compiling module DMEM
+# -- Compiling module IMEM
+# -- Compiling module PC
+# -- Compiling package PC_next_sv_unit
+# -- Compiling module PC_next
+# -- Compiling module EX_MEM_reg
+# -- Compiling module Forwarding_Unit
+# -- Compiling module Hazard_Detection_Unit
+# -- Compiling module ID_EX_reg
+# -- Compiling module IF_ID_reg
+# -- Compiling module MEM_WB_reg
+# -- Compiling module Register
+# 
+# Top level modules:
+# 	RISC_V_pipe_line
+# 	Mux_WB
+# End time: 20:53:34 on Jun 29,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 20:53:34 on Jun 29,2026
+# vlog -reportprogress 300 -sv Test_Bench/RISC_V_pipe_line_tb.sv Test_Bench/RISC_V_pipe_line_tb1.sv 
+# ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
+# -- Compiling module RISC_V_pipe_line_tb
+# -- Compiling module RISC_V_pipe_line_tb1
+# 
+# Top level modules:
+# 	RISC_V_pipe_line_tb
+# 	RISC_V_pipe_line_tb1
+# End time: 20:53:34 on Jun 29,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ** Note: (vsim-220) 'modelsim.ini' is used as the ini file.
+# vsim -voptargs="+acc" work.RISC_V_pipe_line_tb 
+# Start time: 20:53:34 on Jun 29,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vopt-220) 'modelsim.ini' is used as the ini file.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.RISC_V_pipe_line_tb(fast)
+# Loading work.pkg(fast)
+# Loading work.RISC_V_pipe_line_sv_unit(fast)
+# Loading work.RISC_V_pipe_line(fast)
+# Loading work.PC(fast)
+# Loading work.Branch_Target_Buffer(fast)
+# Loading work.IMEM(fast)
+# Loading work.IF_ID_reg(fast)
+# Loading work.Register(fast)
+# Loading work.ImmGen_sv_unit(fast)
+# Loading work.ImmGen(fast)
+# Loading work.Control_sv_unit(fast)
+# Loading work.Control(fast)
+# Loading work.ID_EX_reg(fast)
+# Loading work.MUX_2_1(fast)
+# Loading work.ALU_control_sv_unit(fast)
+# Loading work.ALU_control(fast)
+# Loading work.ALU_sv_unit(fast)
+# Loading work.ALU(fast)
+# Loading work.PC_next_sv_unit(fast)
+# Loading work.PC_next(fast)
+# Loading work.EX_MEM_reg(fast)
+# Loading work.DMEM(fast)
+# Loading work.MEM_WB_reg(fast)
+# Loading work.Hazard_Detection_Unit(fast)
+# Loading work.Forwarding_Unit(fast)
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# .main_pane.wave.interior.cs.body.pw.wf
+# =========================================================
+#            STARTING PIPELINE SIMULATION                  
+# =========================================================
+# 
+# Time=0 | PC=0 | Instruct=04000513 | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=50000 | PC=4 | Instruct=00300593 | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=70000 | PC=8 | Instruct=010000ef | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=90000 | PC=12 | Instruct=00a03023 | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=110000 | PC=16 | Instruct=0000006f | a0(x10)=x | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=130000 | PC=24 | Instruct=00000293 | a0(x10)=64 | a1(x11)=x | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=150000 | PC=28 | Instruct=00000313 | a0(x10)=64 | a1(x11)=3 | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=x
+# Time=170000 | PC=32 | Instruct=00b35c63 | a0(x10)=64 | a1(x11)=3 | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=12
+# Time=190000 | PC=36 | Instruct=00053383 | a0(x10)=64 | a1(x11)=3 | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=12
+# Time=210000 | PC=40 | Instruct=007282b3 | a0(x10)=64 | a1(x11)=3 | t0(x5)=x | t1(x6)=x | t2(x7)=x | ra(x1)=12
+# Time=230000 | PC=44 | Instruct=00850513 | a0(x10)=64 | a1(x11)=3 | t0(x5)=0 | t1(x6)=x | t2(x7)=x | ra(x1)=12
+# Time=250000 | PC=44 | Instruct=00850513 | a0(x10)=64 | a1(x11)=3 | t0(x5)=0 | t1(x6)=0 | t2(x7)=x | ra(x1)=12
+# Time=270000 | PC=48 | Instruct=00130313 | a0(x10)=64 | a1(x11)=3 | t0(x5)=0 | t1(x6)=0 | t2(x7)=x | ra(x1)=12
+# Time=290000 | PC=52 | Instruct=fedff06f | a0(x10)=64 | a1(x11)=3 | t0(x5)=0 | t1(x6)=0 | t2(x7)=10 | ra(x1)=12
+# Time=310000 | PC=56 | Instruct=00500533 | a0(x10)=64 | a1(x11)=3 | t0(x5)=0 | t1(x6)=0 | t2(x7)=10 | ra(x1)=12
+# Time=330000 | PC=60 | Instruct=00008067 | a0(x10)=64 | a1(x11)=3 | t0(x5)=10 | t1(x6)=0 | t2(x7)=10 | ra(x1)=12
+# Time=350000 | PC=32 | Instruct=00b35c63 | a0(x10)=72 | a1(x11)=3 | t0(x5)=10 | t1(x6)=0 | t2(x7)=10 | ra(x1)=12
+# Time=370000 | PC=36 | Instruct=00053383 | a0(x10)=72 | a1(x11)=3 | t0(x5)=10 | t1(x6)=1 | t2(x7)=10 | ra(x1)=12
+# Time=390000 | PC=40 | Instruct=007282b3 | a0(x10)=72 | a1(x11)=3 | t0(x5)=10 | t1(x6)=1 | t2(x7)=10 | ra(x1)=12
+# Time=410000 | PC=44 | Instruct=00850513 | a0(x10)=72 | a1(x11)=3 | t0(x5)=10 | t1(x6)=1 | t2(x7)=10 | ra(x1)=12
+# Time=450000 | PC=48 | Instruct=00130313 | a0(x10)=72 | a1(x11)=3 | t0(x5)=10 | t1(x6)=1 | t2(x7)=10 | ra(x1)=12
+# Time=470000 | PC=52 | Instruct=fedff06f | a0(x10)=72 | a1(x11)=3 | t0(x5)=10 | t1(x6)=1 | t2(x7)=20 | ra(x1)=12
+# Time=490000 | PC=32 | Instruct=00b35c63 | a0(x10)=72 | a1(x11)=3 | t0(x5)=10 | t1(x6)=1 | t2(x7)=20 | ra(x1)=12
+# Time=510000 | PC=36 | Instruct=00053383 | a0(x10)=72 | a1(x11)=3 | t0(x5)=30 | t1(x6)=1 | t2(x7)=20 | ra(x1)=12
+# Time=530000 | PC=40 | Instruct=007282b3 | a0(x10)=80 | a1(x11)=3 | t0(x5)=30 | t1(x6)=1 | t2(x7)=20 | ra(x1)=12
+# Time=550000 | PC=44 | Instruct=00850513 | a0(x10)=80 | a1(x11)=3 | t0(x5)=30 | t1(x6)=2 | t2(x7)=20 | ra(x1)=12
+# Time=590000 | PC=48 | Instruct=00130313 | a0(x10)=80 | a1(x11)=3 | t0(x5)=30 | t1(x6)=2 | t2(x7)=20 | ra(x1)=12
+# Time=610000 | PC=52 | Instruct=fedff06f | a0(x10)=80 | a1(x11)=3 | t0(x5)=30 | t1(x6)=2 | t2(x7)=30 | ra(x1)=12
+# Time=630000 | PC=32 | Instruct=00b35c63 | a0(x10)=80 | a1(x11)=3 | t0(x5)=30 | t1(x6)=2 | t2(x7)=30 | ra(x1)=12
+# Time=650000 | PC=36 | Instruct=00053383 | a0(x10)=80 | a1(x11)=3 | t0(x5)=60 | t1(x6)=2 | t2(x7)=30 | ra(x1)=12
+# Time=670000 | PC=40 | Instruct=007282b3 | a0(x10)=88 | a1(x11)=3 | t0(x5)=60 | t1(x6)=2 | t2(x7)=30 | ra(x1)=12
+# Time=690000 | PC=56 | Instruct=00500533 | a0(x10)=88 | a1(x11)=3 | t0(x5)=60 | t1(x6)=3 | t2(x7)=30 | ra(x1)=12
+# Time=710000 | PC=60 | Instruct=00008067 | a0(x10)=88 | a1(x11)=3 | t0(x5)=60 | t1(x6)=3 | t2(x7)=30 | ra(x1)=12
+# Time=730000 | PC=64 | Instruct=xxxxxxxx | a0(x10)=88 | a1(x11)=3 | t0(x5)=60 | t1(x6)=3 | t2(x7)=30 | ra(x1)=12
+# Time=750000 | PC=68 | Instruct=xxxxxxxx | a0(x10)=88 | a1(x11)=3 | t0(x5)=60 | t1(x6)=3 | t2(x7)=30 | ra(x1)=12
+# Time=770000 | PC=12 | Instruct=00a03023 | a0(x10)=88 | a1(x11)=3 | t0(x5)=60 | t1(x6)=3 | t2(x7)=30 | ra(x1)=12
+# Time=790000 | PC=16 | Instruct=0000006f | a0(x10)=60 | a1(x11)=3 | t0(x5)=60 | t1(x6)=3 | t2(x7)=30 | ra(x1)=12
+# Time=810000 | PC=20 | Instruct=00000013 | a0(x10)=60 | a1(x11)=3 | t0(x5)=60 | t1(x6)=3 | t2(x7)=30 | ra(x1)=12
+# Time=830000 | PC=24 | Instruct=00000293 | a0(x10)=60 | a1(x11)=3 | t0(x5)=60 | t1(x6)=3 | t2(x7)=30 | ra(x1)=12
+# Time=850000 | PC=16 | Instruct=0000006f | a0(x10)=60 | a1(x11)=3 | t0(x5)=60 | t1(x6)=3 | t2(x7)=30 | ra(x1)=12
+# 
+# =======================================================
+#                   SELF-TEST RESULTS                      
+# =======================================================
+# Array sum at DMEM[0] = 60 (Expected = 60)
+# >>> STATUS: [ PASS ] - Pipeline executed function perfectly!
+# =======================================================
+# 
+# ** Note: $finish    : Test_Bench/RISC_V_pipe_line_tb.sv(63)
+#    Time: 1110 ns  Iteration: 0  Instance: /RISC_V_pipe_line_tb
+# 1
+# Break in Module RISC_V_pipe_line_tb at Test_Bench/RISC_V_pipe_line_tb.sv line 63
+# 0 ps
+# 1165500 ps
+# End time: 20:54:15 on Jun 29,2026, Elapsed time: 0:00:41
+# Errors: 0, Warnings: 1
