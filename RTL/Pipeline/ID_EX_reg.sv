@@ -14,6 +14,7 @@ module ID_EX_reg (
     input logic [63:0] ID_Read_data_2,
     input logic [63:0] ID_ImmExt,
     input logic [10:0] ID_Control_signals,
+    input logic [2:0] ID_MemSize,
 
     output logic [63:0] EX_PC,
     output logic [31:0] EX_Instruction,
@@ -23,7 +24,8 @@ module ID_EX_reg (
     output logic [63:0] EX_Read_data_1,
     output logic [63:0] EX_Read_data_2,
     output logic [63:0] EX_ImmExt,
-    output logic [10:0] EX_Control_signals
+    output logic [10:0] EX_Control_signals,
+    output logic [2:0] EX_MemSize
     
 );
 
@@ -40,6 +42,7 @@ module ID_EX_reg (
             EX_Read_data_2 <= '0;
             EX_ImmExt <= '0;
             EX_Control_signals <= '0;
+            EX_MemSize <= '0;
 
         end else if (CLR) begin
             EX_Instruction     <= NOP_Instruction;
@@ -55,6 +58,7 @@ module ID_EX_reg (
             EX_Read_data_2 <= ID_Read_data_2;
             EX_ImmExt <= ID_ImmExt;
             EX_Control_signals <= ID_Control_signals;
+            EX_MemSize <= ID_MemSize;
         end
     end
 

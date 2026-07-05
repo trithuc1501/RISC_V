@@ -19,6 +19,7 @@ module RISC_V_pipe_line (
     logic [63:0] ID_Read_data_2;
     logic [63:0] ID_ImmExt;
     logic [10:0] ID_Control_signals;
+    logic [2:0] ID_MemSize;
 
     logic [63:0] EX_PC;
     logic [31:0] EX_Instruction;
@@ -33,12 +34,14 @@ module RISC_V_pipe_line (
     logic [63:0] EX_Data_To_MEM;
     logic EX_Mispredicted;
     logic EX_BTB_Update_EN;
+    logic [2:0] EX_MemSize;
 
     logic [63:0] MEM_ALU_result;
     logic [63:0] MEM_Write_data;
     logic [63:0] MEM_Read_data;
     logic [4:0] MEM_Write_register;
     logic [3:0] MEM_Control_signals;
+    logic [2:0] MEM_MemSize;
 
     logic [63:0] WB_Read_data;
     logic [63:0] WB_ALU_result;
@@ -134,6 +137,7 @@ module RISC_V_pipe_line (
     assign ID_Read_register_1 = ID_Instruction[19:15];
     assign ID_Read_register_2 = ID_Instruction[24:20];
     assign ID_Write_register  = ID_Instruction[11:7];
+    assign ID_MemSize = ID_Instruction[14:12];
 
     Register Register_top (
         .clk(clk),
@@ -172,6 +176,7 @@ module RISC_V_pipe_line (
         .ID_Read_data_2(ID_Read_data_2),
         .ID_ImmExt(ID_ImmExt),
         .ID_Control_signals(ID_Control_signals),
+        .ID_MemSize(ID_MemSize),
 
         .EX_PC(EX_PC),
         .EX_Instruction(EX_Instruction),
@@ -181,7 +186,8 @@ module RISC_V_pipe_line (
         .EX_Read_data_1(EX_Read_data_1),
         .EX_Read_data_2(EX_Read_data_2),
         .EX_ImmExt(EX_ImmExt),
-        .EX_Control_signals(EX_Control_signals)
+        .EX_Control_signals(EX_Control_signals),
+        .EX_MemSize(EX_MemSize)
     );
 
     always_comb begin
@@ -253,11 +259,13 @@ module RISC_V_pipe_line (
         .EX_Store_Data(Forwarded_B),
         .EX_Write_register(EX_Write_register),
         .EX_Control_signals(EX_Control_signals[6:3]), 
+        .EX_MemSize(EX_MemSize),
 
         .MEM_ALU_result(MEM_ALU_result),
         .MEM_Write_data(MEM_Write_data),
         .MEM_Write_register(MEM_Write_register),
-        .MEM_Control_signals(MEM_Control_signals)
+        .MEM_Control_signals(MEM_Control_signals),
+        .MEM_MemSize(MEM_MemSize)
     );
 
     DMEM DMEM_top (
@@ -266,6 +274,7 @@ module RISC_V_pipe_line (
         .Write_data(MEM_Write_data),
         .MemWrite(MEM_Control_signals[0]),
         .MemRead(MEM_Control_signals[1]),
+        .MemSize(MEM_MemSize),
 
         .Read_data(MEM_Read_data)
     );

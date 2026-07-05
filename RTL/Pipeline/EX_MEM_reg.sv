@@ -9,11 +9,13 @@ module EX_MEM_reg (
     input logic [63:0] EX_Store_Data,
     input logic [4:0] EX_Write_register,
     input logic [3:0] EX_Control_signals, 
+    input logic [2:0] EX_MemSize,
 
     output logic [63:0] MEM_ALU_result,
     output logic [63:0] MEM_Write_data,
     output logic [4:0] MEM_Write_register,
-    output logic [3:0] MEM_Control_signals
+    output logic [3:0] MEM_Control_signals,
+    output logic [2:0] MEM_MemSize
 );
     
     always_ff @(posedge clk or negedge rst_n) begin
@@ -22,6 +24,7 @@ module EX_MEM_reg (
             MEM_Write_data <= '0;
             MEM_Write_register <= '0;
             MEM_Control_signals <= '0;
+            MEM_MemSize <= '0;
             
         end else if (CLR) begin
             MEM_Control_signals <= '0;
@@ -31,6 +34,7 @@ module EX_MEM_reg (
             MEM_Write_data <= EX_Store_Data;
             MEM_Write_register <= EX_Write_register;
             MEM_Control_signals <= EX_Control_signals;
+            MEM_MemSize <= EX_MemSize;
         end
     end
 
