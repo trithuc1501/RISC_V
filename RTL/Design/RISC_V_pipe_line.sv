@@ -2,8 +2,10 @@ import pkg::*;
 
 module RISC_V_pipe_line (
     input clk,
-    input rst_n
+    input rst_n,
+    output [63:0] res
 );  
+
 
     logic [63:0] IF_PC;
     logic [31:0] IF_Instruction;
@@ -72,6 +74,8 @@ module RISC_V_pipe_line (
     logic Final_Take_Branch;
     logic [63:0] Final_Next_Address;
     logic [63:0] Actual_Next_PC;
+
+    assign res = EX_PC;
 
     always_comb begin
         if (EX_Mispredicted) begin

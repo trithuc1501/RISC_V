@@ -1,0 +1,326 @@
+OpenSTA 2.4.0 41a51eaf4c Copyright (c) 2021, Parallax Software, Inc.
+License GPLv3: GNU GPL version 3 <http://gnu.org/licenses/gpl.html>
+
+This is free software, and you are free to change and redistribute it
+under certain conditions; type `show_copying' for details. 
+This program comes with ABSOLUTELY NO WARRANTY; for details type `show_warranty'.
+Warning: synth_netlist.v line 79872, module DMEM not found. Creating black box for DMEM_top.
+Warning: synth_netlist.v line 79954, module IMEM not found. Creating black box for IMEM_top.
+Warning: constraints.sdc line 32, port 'imem_inst*' not found.
+Warning: constraints.sdc line 32, port 'dmem_rdata*' not found.
+Warning: constraints.sdc line 33, port 'imem_addr*' not found.
+Warning: constraints.sdc line 33, port 'dmem_addr*' not found.
+Warning: constraints.sdc line 33, port 'dmem_wdata*' not found.
+Warning: constraints.sdc line 33, port 'dmem_we' not found.
+Warning: constraints.sdc line 33, port 'dmem_re' not found.
+Warning: constraints.sdc line 33, port 'dmem_size*' not found.
+
+=======================================================
+ WNS (Worst Negative Slack) & TNS (Total Negative Slack)
+=======================================================
+wns 0.00
+tns 0.00
+
+=======================================================
+ Worst Timing Path (Setup / Max Delay)
+=======================================================
+Startpoint: ID_EX_reg_top/_643_ (rising edge-triggered flip-flop clocked by clk)
+Endpoint: ID_EX_reg_top/_727_ (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: max
+
+Fanout      Cap     Slew    Delay     Time   Description
+---------------------------------------------------------------------------------
+                   0.150    0.000    0.000   clock clk (rise edge)
+                            0.000    0.000   clock network delay (ideal)
+                   0.150    0.000    0.000 ^ ID_EX_reg_top/_643_/CLK (sky130_fd_sc_hd__dfrtp_1)
+                   0.790    0.885    0.885 ^ ID_EX_reg_top/_643_/Q (sky130_fd_sc_hd__dfrtp_1)
+    23    0.091                              res[1] (net)
+                   0.790    0.000    0.885 ^ Pc_next_top/_312_/B (sky130_fd_sc_hd__xnor2_1)
+                   0.225    0.221    1.106 ^ Pc_next_top/_312_/Y (sky130_fd_sc_hd__xnor2_1)
+     2    0.006                              Pc_next_top/_005_ (net)
+                   0.225    0.000    1.106 ^ Pc_next_top/_316_/A2 (sky130_fd_sc_hd__o21ai_0)
+                   0.117    0.157    1.263 v Pc_next_top/_316_/Y (sky130_fd_sc_hd__o21ai_0)
+     2    0.007                              Pc_next_top/_008_ (net)
+                   0.117    0.000    1.263 v Pc_next_top/_320_/C (sky130_fd_sc_hd__maj3_1)
+                   0.092    0.400    1.662 v Pc_next_top/_320_/X (sky130_fd_sc_hd__maj3_1)
+     2    0.007                              Pc_next_top/_011_ (net)
+                   0.092    0.000    1.662 v Pc_next_top/_326_/C (sky130_fd_sc_hd__maj3_1)
+                   0.090    0.389    2.052 v Pc_next_top/_326_/X (sky130_fd_sc_hd__maj3_1)
+     3    0.007                              Pc_next_top/_016_ (net)
+                   0.090    0.000    2.052 v Pc_next_top/_332_/C (sky130_fd_sc_hd__maj3_1)
+                   0.090    0.389    2.440 v Pc_next_top/_332_/X (sky130_fd_sc_hd__maj3_1)
+     3    0.007                              Pc_next_top/_021_ (net)
+                   0.090    0.000    2.440 v Pc_next_top/_338_/C (sky130_fd_sc_hd__maj3_1)
+                   0.090    0.389    2.829 v Pc_next_top/_338_/X (sky130_fd_sc_hd__maj3_1)
+     3    0.007                              Pc_next_top/_026_ (net)
+                   0.090    0.000    2.829 v Pc_next_top/_344_/C (sky130_fd_sc_hd__maj3_1)
+                   0.090    0.389    3.218 v Pc_next_top/_344_/X (sky130_fd_sc_hd__maj3_1)
+     3    0.007                              Pc_next_top/_031_ (net)
+                   0.090    0.000    3.218 v Pc_next_top/_350_/C (sky130_fd_sc_hd__maj3_1)
+                   0.090    0.389    3.607 v Pc_next_top/_350_/X (sky130_fd_sc_hd__maj3_1)
+     3    0.007                              Pc_next_top/_036_ (net)
+                   0.090    0.000    3.607 v Pc_next_top/_356_/C (sky130_fd_sc_hd__maj3_1)
+                   0.090    0.389    3.996 v Pc_next_top/_356_/X (sky130_fd_sc_hd__maj3_1)
+     3    0.007                              Pc_next_top/_041_ (net)
+                   0.090    0.000    3.996 v Pc_next_top/_362_/C (sky130_fd_sc_hd__maj3_1)
+                   0.090    0.389    4.385 v Pc_next_top/_362_/X (sky130_fd_sc_hd__maj3_1)
+     3    0.007                              Pc_next_top/_046_ (net)
+                   0.090    0.000    4.385 v Pc_next_top/_368_/C (sky130_fd_sc_hd__maj3_1)
+                   0.090    0.389    4.773 v Pc_next_top/_368_/X (sky130_fd_sc_hd__maj3_1)
+     3    0.007                              Pc_next_top/_051_ (net)
+                   0.090    0.000    4.773 v Pc_next_top/_374_/C (sky130_fd_sc_hd__maj3_1)
+                   0.090    0.389    5.162 v Pc_next_top/_374_/X (sky130_fd_sc_hd__maj3_1)
+     3    0.007                              Pc_next_top/_056_ (net)
+                   0.090    0.000    5.162 v Pc_next_top/_380_/C (sky130_fd_sc_hd__maj3_1)
+                   0.090    0.389    5.551 v Pc_next_top/_380_/X (sky130_fd_sc_hd__maj3_1)
+     3    0.007                              Pc_next_top/_061_ (net)
+                   0.090    0.000    5.551 v Pc_next_top/_386_/C (sky130_fd_sc_hd__maj3_1)
+                   0.090    0.389    5.940 v Pc_next_top/_386_/X (sky130_fd_sc_hd__maj3_1)
+     3    0.007                              Pc_next_top/_066_ (net)
+                   0.090    0.000    5.940 v Pc_next_top/_392_/C (sky130_fd_sc_hd__maj3_1)
+                   0.090    0.389    6.329 v Pc_next_top/_392_/X (sky130_fd_sc_hd__maj3_1)
+     3    0.007                              Pc_next_top/_071_ (net)
+                   0.090    0.000    6.329 v Pc_next_top/_398_/C (sky130_fd_sc_hd__maj3_1)
+                   0.090    0.389    6.718 v Pc_next_top/_398_/X (sky130_fd_sc_hd__maj3_1)
+     3    0.007                              Pc_next_top/_076_ (net)
+                   0.090    0.000    6.718 v Pc_next_top/_404_/C (sky130_fd_sc_hd__maj3_1)
+                   0.092    0.392    7.109 v Pc_next_top/_404_/X (sky130_fd_sc_hd__maj3_1)
+     2    0.007                              Pc_next_top/_081_ (net)
+                   0.092    0.000    7.109 v Pc_next_top/_409_/C (sky130_fd_sc_hd__maj3_1)
+                   0.090    0.389    7.499 v Pc_next_top/_409_/X (sky130_fd_sc_hd__maj3_1)
+     3    0.007                              Pc_next_top/_085_ (net)
+                   0.090    0.000    7.499 v Pc_next_top/_415_/C (sky130_fd_sc_hd__maj3_1)
+                   0.092    0.391    7.890 v Pc_next_top/_415_/X (sky130_fd_sc_hd__maj3_1)
+     2    0.007                              Pc_next_top/_090_ (net)
+                   0.092    0.000    7.890 v Pc_next_top/_420_/C (sky130_fd_sc_hd__maj3_1)
+                   0.090    0.389    8.279 v Pc_next_top/_420_/X (sky130_fd_sc_hd__maj3_1)
+     3    0.007                              Pc_next_top/_094_ (net)
+                   0.090    0.000    8.279 v Pc_next_top/_426_/C (sky130_fd_sc_hd__maj3_1)
+                   0.092    0.391    8.671 v Pc_next_top/_426_/X (sky130_fd_sc_hd__maj3_1)
+     2    0.007                              Pc_next_top/_099_ (net)
+                   0.092    0.000    8.671 v Pc_next_top/_431_/C (sky130_fd_sc_hd__maj3_1)
+                   0.090    0.389    9.060 v Pc_next_top/_431_/X (sky130_fd_sc_hd__maj3_1)
+     3    0.007                              Pc_next_top/_103_ (net)
+                   0.090    0.000    9.060 v Pc_next_top/_437_/C (sky130_fd_sc_hd__maj3_1)
+                   0.092    0.392    9.452 v Pc_next_top/_437_/X (sky130_fd_sc_hd__maj3_1)
+     2    0.007                              Pc_next_top/_108_ (net)
+                   0.092    0.000    9.452 v Pc_next_top/_442_/C (sky130_fd_sc_hd__maj3_1)
+                   0.090    0.389    9.841 v Pc_next_top/_442_/X (sky130_fd_sc_hd__maj3_1)
+     3    0.007                              Pc_next_top/_112_ (net)
+                   0.090    0.000    9.841 v Pc_next_top/_448_/C (sky130_fd_sc_hd__maj3_1)
+                   0.092    0.391   10.233 v Pc_next_top/_448_/X (sky130_fd_sc_hd__maj3_1)
+     2    0.007                              Pc_next_top/_117_ (net)
+                   0.092    0.000   10.233 v Pc_next_top/_453_/C (sky130_fd_sc_hd__maj3_1)
+                   0.090    0.389   10.622 v Pc_next_top/_453_/X (sky130_fd_sc_hd__maj3_1)
+     3    0.007                              Pc_next_top/_121_ (net)
+                   0.090    0.000   10.622 v Pc_next_top/_459_/C (sky130_fd_sc_hd__maj3_1)
+                   0.092    0.392   11.014 v Pc_next_top/_459_/X (sky130_fd_sc_hd__maj3_1)
+     2    0.007                              Pc_next_top/_126_ (net)
+                   0.092    0.000   11.014 v Pc_next_top/_464_/C (sky130_fd_sc_hd__maj3_1)
+                   0.090    0.389   11.403 v Pc_next_top/_464_/X (sky130_fd_sc_hd__maj3_1)
+     3    0.007                              Pc_next_top/_130_ (net)
+                   0.090    0.000   11.403 v Pc_next_top/_470_/C (sky130_fd_sc_hd__maj3_1)
+                   0.092    0.392   11.795 v Pc_next_top/_470_/X (sky130_fd_sc_hd__maj3_1)
+     2    0.007                              Pc_next_top/_135_ (net)
+                   0.092    0.000   11.795 v Pc_next_top/_475_/C (sky130_fd_sc_hd__maj3_1)
+                   0.090    0.389   12.184 v Pc_next_top/_475_/X (sky130_fd_sc_hd__maj3_1)
+     3    0.007                              Pc_next_top/_139_ (net)
+                   0.090    0.000   12.184 v Pc_next_top/_481_/C (sky130_fd_sc_hd__maj3_1)
+                   0.092    0.391   12.576 v Pc_next_top/_481_/X (sky130_fd_sc_hd__maj3_1)
+     2    0.007                              Pc_next_top/_144_ (net)
+                   0.092    0.000   12.576 v Pc_next_top/_486_/C (sky130_fd_sc_hd__maj3_1)
+                   0.090    0.389   12.965 v Pc_next_top/_486_/X (sky130_fd_sc_hd__maj3_1)
+     3    0.007                              Pc_next_top/_148_ (net)
+                   0.090    0.000   12.965 v Pc_next_top/_492_/C (sky130_fd_sc_hd__maj3_1)
+                   0.092    0.392   13.357 v Pc_next_top/_492_/X (sky130_fd_sc_hd__maj3_1)
+     2    0.007                              Pc_next_top/_153_ (net)
+                   0.092    0.000   13.357 v Pc_next_top/_497_/C (sky130_fd_sc_hd__maj3_1)
+                   0.090    0.389   13.746 v Pc_next_top/_497_/X (sky130_fd_sc_hd__maj3_1)
+     3    0.007                              Pc_next_top/_157_ (net)
+                   0.090    0.000   13.746 v Pc_next_top/_503_/C (sky130_fd_sc_hd__maj3_1)
+                   0.092    0.392   14.138 v Pc_next_top/_503_/X (sky130_fd_sc_hd__maj3_1)
+     2    0.007                              Pc_next_top/_162_ (net)
+                   0.092    0.000   14.138 v Pc_next_top/_508_/C (sky130_fd_sc_hd__maj3_1)
+                   0.090    0.389   14.527 v Pc_next_top/_508_/X (sky130_fd_sc_hd__maj3_1)
+     3    0.007                              Pc_next_top/_166_ (net)
+                   0.090    0.000   14.527 v Pc_next_top/_514_/C (sky130_fd_sc_hd__maj3_1)
+                   0.092    0.391   14.918 v Pc_next_top/_514_/X (sky130_fd_sc_hd__maj3_1)
+     2    0.007                              Pc_next_top/_171_ (net)
+                   0.092    0.000   14.918 v Pc_next_top/_519_/C (sky130_fd_sc_hd__maj3_1)
+                   0.090    0.389   15.308 v Pc_next_top/_519_/X (sky130_fd_sc_hd__maj3_1)
+     3    0.007                              Pc_next_top/_175_ (net)
+                   0.090    0.000   15.308 v Pc_next_top/_525_/C (sky130_fd_sc_hd__maj3_1)
+                   0.092    0.392   15.699 v Pc_next_top/_525_/X (sky130_fd_sc_hd__maj3_1)
+     2    0.007                              Pc_next_top/_180_ (net)
+                   0.092    0.000   15.699 v Pc_next_top/_530_/C (sky130_fd_sc_hd__maj3_1)
+                   0.090    0.389   16.089 v Pc_next_top/_530_/X (sky130_fd_sc_hd__maj3_1)
+     3    0.007                              Pc_next_top/_184_ (net)
+                   0.090    0.000   16.089 v Pc_next_top/_536_/C (sky130_fd_sc_hd__maj3_1)
+                   0.092    0.392   16.480 v Pc_next_top/_536_/X (sky130_fd_sc_hd__maj3_1)
+     2    0.007                              Pc_next_top/_189_ (net)
+                   0.092    0.000   16.480 v Pc_next_top/_541_/C (sky130_fd_sc_hd__maj3_1)
+                   0.090    0.389   16.870 v Pc_next_top/_541_/X (sky130_fd_sc_hd__maj3_1)
+     3    0.007                              Pc_next_top/_193_ (net)
+                   0.090    0.000   16.870 v Pc_next_top/_547_/C (sky130_fd_sc_hd__maj3_1)
+                   0.092    0.391   17.261 v Pc_next_top/_547_/X (sky130_fd_sc_hd__maj3_1)
+     2    0.007                              Pc_next_top/_198_ (net)
+                   0.092    0.000   17.261 v Pc_next_top/_552_/C (sky130_fd_sc_hd__maj3_1)
+                   0.090    0.389   17.651 v Pc_next_top/_552_/X (sky130_fd_sc_hd__maj3_1)
+     3    0.007                              Pc_next_top/_202_ (net)
+                   0.090    0.000   17.651 v Pc_next_top/_558_/C (sky130_fd_sc_hd__maj3_1)
+                   0.092    0.391   18.042 v Pc_next_top/_558_/X (sky130_fd_sc_hd__maj3_1)
+     2    0.007                              Pc_next_top/_207_ (net)
+                   0.092    0.000   18.042 v Pc_next_top/_563_/C (sky130_fd_sc_hd__maj3_1)
+                   0.090    0.389   18.432 v Pc_next_top/_563_/X (sky130_fd_sc_hd__maj3_1)
+     3    0.007                              Pc_next_top/_211_ (net)
+                   0.090    0.000   18.432 v Pc_next_top/_569_/C (sky130_fd_sc_hd__maj3_1)
+                   0.092    0.392   18.823 v Pc_next_top/_569_/X (sky130_fd_sc_hd__maj3_1)
+     2    0.007                              Pc_next_top/_216_ (net)
+                   0.092    0.000   18.823 v Pc_next_top/_574_/C (sky130_fd_sc_hd__maj3_1)
+                   0.090    0.389   19.213 v Pc_next_top/_574_/X (sky130_fd_sc_hd__maj3_1)
+     3    0.007                              Pc_next_top/_220_ (net)
+                   0.090    0.000   19.213 v Pc_next_top/_580_/C (sky130_fd_sc_hd__maj3_1)
+                   0.090    0.389   19.601 v Pc_next_top/_580_/X (sky130_fd_sc_hd__maj3_1)
+     3    0.007                              Pc_next_top/_225_ (net)
+                   0.090    0.000   19.601 v Pc_next_top/_586_/C (sky130_fd_sc_hd__maj3_1)
+                   0.090    0.389   19.990 v Pc_next_top/_586_/X (sky130_fd_sc_hd__maj3_1)
+     3    0.007                              Pc_next_top/_230_ (net)
+                   0.090    0.000   19.990 v Pc_next_top/_592_/C (sky130_fd_sc_hd__maj3_1)
+                   0.090    0.389   20.379 v Pc_next_top/_592_/X (sky130_fd_sc_hd__maj3_1)
+     3    0.007                              Pc_next_top/_235_ (net)
+                   0.090    0.000   20.379 v Pc_next_top/_598_/C (sky130_fd_sc_hd__maj3_1)
+                   0.090    0.389   20.768 v Pc_next_top/_598_/X (sky130_fd_sc_hd__maj3_1)
+     3    0.007                              Pc_next_top/_240_ (net)
+                   0.090    0.000   20.768 v Pc_next_top/_604_/C (sky130_fd_sc_hd__maj3_1)
+                   0.090    0.389   21.157 v Pc_next_top/_604_/X (sky130_fd_sc_hd__maj3_1)
+     3    0.007                              Pc_next_top/_245_ (net)
+                   0.090    0.000   21.157 v Pc_next_top/_610_/C (sky130_fd_sc_hd__maj3_1)
+                   0.090    0.389   21.546 v Pc_next_top/_610_/X (sky130_fd_sc_hd__maj3_1)
+     3    0.007                              Pc_next_top/_250_ (net)
+                   0.090    0.000   21.546 v Pc_next_top/_616_/C (sky130_fd_sc_hd__maj3_1)
+                   0.090    0.389   21.934 v Pc_next_top/_616_/X (sky130_fd_sc_hd__maj3_1)
+     3    0.007                              Pc_next_top/_255_ (net)
+                   0.090    0.000   21.934 v Pc_next_top/_622_/C (sky130_fd_sc_hd__maj3_1)
+                   0.090    0.389   22.323 v Pc_next_top/_622_/X (sky130_fd_sc_hd__maj3_1)
+     3    0.007                              Pc_next_top/_260_ (net)
+                   0.090    0.000   22.323 v Pc_next_top/_628_/C (sky130_fd_sc_hd__maj3_1)
+                   0.090    0.389   22.712 v Pc_next_top/_628_/X (sky130_fd_sc_hd__maj3_1)
+     3    0.007                              Pc_next_top/_265_ (net)
+                   0.090    0.000   22.712 v Pc_next_top/_634_/C (sky130_fd_sc_hd__maj3_1)
+                   0.090    0.389   23.101 v Pc_next_top/_634_/X (sky130_fd_sc_hd__maj3_1)
+     3    0.007                              Pc_next_top/_270_ (net)
+                   0.090    0.000   23.101 v Pc_next_top/_640_/C (sky130_fd_sc_hd__maj3_1)
+                   0.090    0.389   23.490 v Pc_next_top/_640_/X (sky130_fd_sc_hd__maj3_1)
+     3    0.007                              Pc_next_top/_275_ (net)
+                   0.090    0.000   23.490 v Pc_next_top/_646_/C (sky130_fd_sc_hd__maj3_1)
+                   0.090    0.389   23.879 v Pc_next_top/_646_/X (sky130_fd_sc_hd__maj3_1)
+     3    0.007                              Pc_next_top/_280_ (net)
+                   0.090    0.000   23.879 v Pc_next_top/_652_/C (sky130_fd_sc_hd__maj3_1)
+                   0.090    0.389   24.267 v Pc_next_top/_652_/X (sky130_fd_sc_hd__maj3_1)
+     3    0.007                              Pc_next_top/_285_ (net)
+                   0.090    0.000   24.267 v Pc_next_top/_658_/C (sky130_fd_sc_hd__maj3_1)
+                   0.090    0.389   24.656 v Pc_next_top/_658_/X (sky130_fd_sc_hd__maj3_1)
+     3    0.007                              Pc_next_top/_290_ (net)
+                   0.090    0.000   24.656 v Pc_next_top/_663_/C (sky130_fd_sc_hd__maj3_1)
+                   0.076    0.371   25.027 v Pc_next_top/_663_/X (sky130_fd_sc_hd__maj3_1)
+     1    0.004                              Pc_next_top/_294_ (net)
+                   0.076    0.000   25.027 v Pc_next_top/_665_/A (sky130_fd_sc_hd__xnor2_1)
+                   0.039    0.125   25.152 v Pc_next_top/_665_/Y (sky130_fd_sc_hd__xnor2_1)
+     1    0.002                              Pc_next_top/_296_ (net)
+                   0.039    0.000   25.152 v Pc_next_top/_667_/A2 (sky130_fd_sc_hd__o21ai_0)
+                   0.964    0.670   25.822 ^ Pc_next_top/_667_/Y (sky130_fd_sc_hd__o21ai_0)
+    17    0.029                              Target_Address[63] (net)
+                   0.964    0.000   25.822 ^ _0968_/A1 (sky130_fd_sc_hd__mux2i_1)
+                   0.353    0.211   26.033 v _0968_/Y (sky130_fd_sc_hd__mux2i_1)
+     3    0.005                              _0074_ (net)
+                   0.353    0.000   26.033 v _0969_/SLEEP (sky130_fd_sc_hd__lpflow_inputiso1p_1)
+                   0.047    0.328   26.361 v _0969_/X (sky130_fd_sc_hd__lpflow_inputiso1p_1)
+     1    0.002                              _0075_ (net)
+                   0.047    0.000   26.361 v _1228_/A1 (sky130_fd_sc_hd__a31oi_1)
+                   2.259    1.545   27.906 ^ _1228_/Y (sky130_fd_sc_hd__a31oi_1)
+    42    0.103                              EX_Mispredicted (net)
+                   2.259    0.000   27.906 ^ Hazard_Detection_Unit_top/_45_/A (sky130_fd_sc_hd__nor3b_1)
+                   0.258    0.105   28.011 v Hazard_Detection_Unit_top/_45_/Y (sky130_fd_sc_hd__nor3b_1)
+     1    0.002                              Hazard_Detection_Unit_top/_22_ (net)
+                   0.258    0.000   28.011 v Hazard_Detection_Unit_top/_46_/B1 (sky130_fd_sc_hd__o21ai_0)
+                   6.743    2.470   30.481 ^ Hazard_Detection_Unit_top/_46_/Y (sky130_fd_sc_hd__o21ai_0)
+    95    0.240                              PC_EN (net)
+                   6.743    0.000   30.481 ^ Hazard_Detection_Unit_top/_47_/B (sky130_fd_sc_hd__nand2b_1)
+                   0.795    0.423   30.905 v Hazard_Detection_Unit_top/_47_/Y (sky130_fd_sc_hd__nand2b_1)
+     4    0.007                              ID_EX_CLR (net)
+                   0.795    0.000   30.905 v ID_EX_reg_top/_321_/SLEEP (sky130_fd_sc_hd__lpflow_isobufsrc_1)
+                  18.374   13.962   44.867 ^ ID_EX_reg_top/_321_/X (sky130_fd_sc_hd__lpflow_isobufsrc_1)
+   314    1.066                              ID_EX_reg_top/_319_ (net)
+                  18.374    0.000   44.867 ^ ID_EX_reg_top/_410_/A2 (sky130_fd_sc_hd__a22o_1)
+                   0.451    1.267   46.133 ^ ID_EX_reg_top/_410_/X (sky130_fd_sc_hd__a22o_1)
+     1    0.002                              ID_EX_reg_top/_085_ (net)
+                   0.451    0.000   46.133 ^ ID_EX_reg_top/_727_/D (sky130_fd_sc_hd__dfrtp_1)
+                                    46.133   data arrival time
+
+                   0.150   50.000   50.000   clock clk (rise edge)
+                            0.000   50.000   clock network delay (ideal)
+                           -0.250   49.750   clock uncertainty
+                            0.000   49.750   clock reconvergence pessimism
+                                    49.750 ^ ID_EX_reg_top/_727_/CLK (sky130_fd_sc_hd__dfrtp_1)
+                           -0.135   49.615   library setup time
+                                    49.615   data required time
+---------------------------------------------------------------------------------
+                                    49.615   data required time
+                                   -46.133   data arrival time
+---------------------------------------------------------------------------------
+                                     3.481   slack (MET)
+
+
+
+=======================================================
+ Worst Timing Path (Hold / Min Delay)
+=======================================================
+Startpoint: Register_top/_12954_
+            (rising edge-triggered flip-flop clocked by clk)
+Endpoint: Register_top/_12954_ (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: min
+
+Fanout      Cap     Slew    Delay     Time   Description
+---------------------------------------------------------------------------------
+                   0.150    0.000    0.000   clock clk (rise edge)
+                            0.000    0.000   clock network delay (ideal)
+                   0.150    0.000    0.000 ^ Register_top/_12954_/CLK (sky130_fd_sc_hd__dfxtp_1)
+                   0.039    0.339    0.339 v Register_top/_12954_/Q (sky130_fd_sc_hd__dfxtp_1)
+     3    0.005                              Register_top/Register[0][0] (net)
+                   0.039    0.000    0.339 v Register_top/_11482_/A (sky130_fd_sc_hd__buf_1)
+                   0.022    0.078    0.418 v Register_top/_11482_/X (sky130_fd_sc_hd__buf_1)
+     1    0.002                              Register_top/_01408_ (net)
+                   0.022    0.000    0.418 v Register_top/_12954_/D (sky130_fd_sc_hd__dfxtp_1)
+                                     0.418   data arrival time
+
+                   0.150    0.000    0.000   clock clk (rise edge)
+                            0.000    0.000   clock network delay (ideal)
+                            0.250    0.250   clock uncertainty
+                            0.000    0.250   clock reconvergence pessimism
+                                     0.250 ^ Register_top/_12954_/CLK (sky130_fd_sc_hd__dfxtp_1)
+                           -0.020    0.230   library hold time
+                                     0.230   data required time
+---------------------------------------------------------------------------------
+                                     0.230   data required time
+                                    -0.418   data arrival time
+---------------------------------------------------------------------------------
+                                     0.188   slack (MET)
+
+
+
+=======================================================
+ Power & Area Summary
+=======================================================
+Group                  Internal  Switching    Leakage      Total
+                          Power      Power      Power      Power (Watts)
+----------------------------------------------------------------
+Sequential             4.18e-03   2.71e-04   5.01e-08   4.45e-03  71.2%
+Combinational          1.16e-03   6.43e-04   4.12e-08   1.80e-03  28.8%
+Macro                  0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+Pad                    0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+----------------------------------------------------------------
+Total                  5.34e-03   9.14e-04   9.12e-08   6.25e-03 100.0%
+                          85.4%      14.6%       0.0%
+% 

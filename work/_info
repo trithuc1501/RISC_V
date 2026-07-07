@@ -10,14 +10,14 @@ Z0 !s99 nomlopt
 !i10e 25
 !i10f 100
 cModel Technology
-Z1 d/home/trithuc/Documents/projects/RISC_V
+Z1 d/home/trithuc/Documents/tools/OpenLane/designs/RISC_V
 T_opt
 !i145 1
 !i144 0
-Z2 !s110 1783282594
-VO>iRziBlb::h:e`R0lU0e3
-04 19 4 work RISC_V_pipe_line_tb fast 0
-=1-b267b5c31d16-6a4abba2-319c0-11c49
+Z2 !s110 1783433460
+Vjbh=fZ3<=K`LYokB:6>_:1
+04 26 4 work RISC_V_pipe_line_benchmark fast 0
+=1-b267b5c31d16-6a4d08f4-abf37-9ac9
 R0
 !s12f OEM100
 !s12b OEM100
@@ -49,7 +49,7 @@ Z10 FRTL/ALU/ALU.sv
 L0 3 44
 Z11 OL;L;2025.2;82
 31
-Z12 !s108 1783282594.000000
+Z12 !s108 1783433460.000000
 Z13 !s107 RTL/Register/Register.sv|RTL/Pipeline/MEM_WB_reg.sv|RTL/Pipeline/IF_ID_reg.sv|RTL/Pipeline/ID_EX_reg.sv|RTL/Pipeline/Hazard_Detection_Unit.sv|RTL/Pipeline/Forwarding_Unit.sv|RTL/Pipeline/EX_MEM_reg.sv|RTL/PC/PC_next.sv|RTL/PC/PC.sv|RTL/Memory/IMEM.sv|RTL/Memory/DMEM.sv|RTL/MUX/Mux_WB.sv|RTL/MUX/MUX_2_1.sv|RTL/ImmGen/ImmGen.sv|RTL/Design/pkg.sv|RTL/Design/RISC_V_pipe_line.sv|RTL/CtrlUnit/Control.sv|RTL/BTB/Branch_Target_Buffer.sv|RTL/ALU/ALU_control.sv|RTL/ALU/ALU.sv|
 Z14 !s90 -reportprogress|300|-sv|RTL/ALU/ALU.sv|RTL/ALU/ALU_control.sv|RTL/BTB/Branch_Target_Buffer.sv|RTL/CtrlUnit/Control.sv|RTL/Design/RISC_V_pipe_line.sv|RTL/Design/pkg.sv|RTL/ImmGen/ImmGen.sv|RTL/MUX/MUX_2_1.sv|RTL/MUX/Mux_WB.sv|RTL/Memory/DMEM.sv|RTL/Memory/IMEM.sv|RTL/PC/PC.sv|RTL/PC/PC_next.sv|RTL/Pipeline/EX_MEM_reg.sv|RTL/Pipeline/Forwarding_Unit.sv|RTL/Pipeline/Hazard_Detection_Unit.sv|RTL/Pipeline/ID_EX_reg.sv|RTL/Pipeline/IF_ID_reg.sv|RTL/Pipeline/MEM_WB_reg.sv|RTL/Register/Register.sv|
 !i113 0
@@ -229,15 +229,15 @@ R4
 R5
 R2
 !i10b 1
-!s100 CgZZd2O<[FnWjIXzIBIo30
-IR;zoU1aV><8VY?484dD8z1
+!s100 =f>g8i_Q3SL>G@eg^218P2
+I6;[?6j4ofCo1ozz[Hd5Ob0
 S1
 R1
-w1783282575
+w1783331959
 8RTL/Memory/DMEM.sv
 FRTL/Memory/DMEM.sv
 !i122 1
-L0 27 72
+L0 1 63
 R7
 R11
 r1
@@ -385,15 +385,15 @@ R4
 R5
 R2
 !i10b 1
-!s100 4eDR8>7GIM1J6n1nAm3EJ3
-IJ8AVF@>oW]iSPkCz]bLKc2
+!s100 hLUPzCMmkcbl2d^c^Mb^e3
+Ig[JT8bhQK6IKO;=8[ZO]O0
 S1
 R1
-R8
+w1783331977
 8RTL/Memory/IMEM.sv
 FRTL/Memory/IMEM.sv
 !i122 1
-L0 1 10
+L0 1 12
 R7
 R11
 r1
@@ -679,22 +679,22 @@ vRISC_V_pipe_line
 R4
 R5
 R6
-DXx4 work 24 RISC_V_pipe_line_sv_unit 0 22 g^PifW2eI81`7^kCd:@Qd0
+DXx4 work 24 RISC_V_pipe_line_sv_unit 0 22 5Yn]XkaG8kKcaRe?D<MbC1
 R2
 R7
 r1
 !s85 0
 !i10b 1
-!s100 06LGE6DkGnlZ@g=e57zUa0
-ISEjUj?@:jeKbeI]P:9fIN1
+!s100 Pk;1IzZ3V?SLDlDneYIFo3
+IC@DAYW@g<>hU_U0W^36E@0
 !s105 RISC_V_pipe_line_sv_unit
 S1
 R1
-Z28 w1783281700
+Z28 w1783355740
 Z29 8RTL/Design/RISC_V_pipe_line.sv
 Z30 FRTL/Design/RISC_V_pipe_line.sv
 !i122 1
-L0 3 323
+L0 3 327
 R11
 31
 R12
@@ -704,17 +704,43 @@ R14
 R15
 R3
 n@r@i@s@c_@v_pipe_line
+vRISC_V_pipe_line_benchmark
+2Benchmark/RISC_V_pipe_line_benchmark.sv
+R5
+R2
+!i10b 1
+!s100 :KVVimE=J@MzSVSH?lk0B2
+I^^Yo=63]HRKBYiVnUG6VF3
+S1
+R1
+w1783431299
+8Benchmark/RISC_V_pipe_line_benchmark.sv
+FBenchmark/RISC_V_pipe_line_benchmark.sv
+!i122 2
+L0 3 169
+R7
+R11
+r1
+!s85 0
+31
+R12
+!s107 Benchmark/RISC_V_pipe_line_benchmark.sv|
+!s90 -reportprogress|300|-sv|Benchmark/RISC_V_pipe_line_benchmark.sv|
+!i113 0
+R15
+R3
+n@r@i@s@c_@v_pipe_line_benchmark
 XRISC_V_pipe_line_sv_unit
 R4
 R5
 R6
 R2
-Vg^PifW2eI81`7^kCd:@Qd0
+V5Yn]XkaG8kKcaRe?D<MbC1
 r1
 !s85 0
 !i10b 1
-!s100 TaN``H;]E;:IgloZz;LR>2
-Ig^PifW2eI81`7^kCd:@Qd0
+!s100 Egn_lAKL@z]5ji@je@RTd1
+I5Yn]XkaG8kKcaRe?D<MbC1
 !i103 1
 S1
 R1
@@ -732,29 +758,3 @@ R14
 R15
 R3
 n@r@i@s@c_@v_pipe_line_sv_unit
-vRISC_V_pipe_line_tb
-2Benchmark/RISC_V_pipe_line_tb.sv
-R5
-R2
-!i10b 1
-!s100 Z:C;Ul0Dl_m`zSm@5NJZ72
-Io5_>B^aB^9P1O_NND3]O90
-S1
-R1
-w1783278400
-8Benchmark/RISC_V_pipe_line_tb.sv
-FBenchmark/RISC_V_pipe_line_tb.sv
-!i122 2
-L0 18 206
-R7
-R11
-r1
-!s85 0
-31
-R12
-!s107 Benchmark/RISC_V_pipe_line_tb.sv|
-!s90 -reportprogress|300|-sv|Benchmark/RISC_V_pipe_line_tb.sv|
-!i113 0
-R15
-R3
-n@r@i@s@c_@v_pipe_line_tb

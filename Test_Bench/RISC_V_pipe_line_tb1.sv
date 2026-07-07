@@ -67,7 +67,6 @@ module RISC_V_pipe_line_tb1;
         $finish;
     end
 
-    // Theo dõi toàn bộ quá trình biến đổi của các thanh ghi chính
     initial begin
         $monitor("Time=%0t | PC=%0d | x4=%0d | x5=%0d | x7=%0d | x9=%0d | x11=%0d | x12=%0d | x13=%0d", 
                  $time, 

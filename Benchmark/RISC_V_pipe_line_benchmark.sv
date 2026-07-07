@@ -1,12 +1,12 @@
 `timescale 1ns/1ps
 
-module RISC_V_pipe_line_tb;
+module RISC_V_pipe_line_benchmark;
     logic clk;
     logic rst_n;
 
     string imem_path = "Benchmark/imem.hex";
     string dmem_path = "Benchmark/dmem.hex";
-    int    timeout_cycles = 50000;
+    int    timeout_cycles = 500000;
 
     localparam CLK_PERIOD = 20;
 
@@ -73,7 +73,7 @@ module RISC_V_pipe_line_tb;
         void'($value$plusargs("TIMEOUT=%d", timeout_cycles));
 
         $dumpfile("riscv_pipeline.vcd");
-        $dumpvars(0, RISC_V_pipe_line_tb);
+        $dumpvars(0, RISC_V_pipe_line_benchmark);
 
         $display("=========================================================");
         $display("           STARTING BENCHMARK SIMULATION                 ");

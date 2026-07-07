@@ -1,0 +1,5 @@
+riscv_pipeline.vcd
+*.vcd
+work/
+transcript
+modelsim.ini

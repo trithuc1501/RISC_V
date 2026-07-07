@@ -10,7 +10,7 @@ module DMEM (
 
     output logic [63:0] Read_data
 );
-
+    `ifndef SYNTHESIS
     logic [7:0] memory [0:262143];
 
     logic [7:0]  byte_data;
@@ -58,5 +58,6 @@ module DMEM (
             end
         end
     end
+    `endif
 
 endmodule

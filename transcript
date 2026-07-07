@@ -18,17 +18,17 @@
 # ** Note: (vmap-220) 'modelsim.ini' is used as the ini file.
 # Modifying modelsim.ini
 # Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
-# Start time: 03:16:33 on Jul 06,2026
+# Start time: 21:08:56 on Jul 07,2026
 # vlog -reportprogress 300 -sv RTL/Design/pkg.sv 
 # ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
 # -- Compiling package pkg
 # 
 # Top level modules:
 # 	--none--
-# End time: 03:16:34 on Jul 06,2026, Elapsed time: 0:00:01
+# End time: 21:08:56 on Jul 07,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
-# Start time: 03:16:34 on Jul 06,2026
+# Start time: 21:08:56 on Jul 07,2026
 # vlog -reportprogress 300 -sv RTL/ALU/ALU.sv RTL/ALU/ALU_control.sv RTL/BTB/Branch_Target_Buffer.sv RTL/CtrlUnit/Control.sv RTL/Design/RISC_V_pipe_line.sv RTL/Design/pkg.sv RTL/ImmGen/ImmGen.sv RTL/MUX/MUX_2_1.sv RTL/MUX/Mux_WB.sv RTL/Memory/DMEM.sv RTL/Memory/IMEM.sv RTL/PC/PC.sv RTL/PC/PC_next.sv RTL/Pipeline/EX_MEM_reg.sv RTL/Pipeline/Forwarding_Unit.sv RTL/Pipeline/Hazard_Detection_Unit.sv RTL/Pipeline/ID_EX_reg.sv RTL/Pipeline/IF_ID_reg.sv RTL/Pipeline/MEM_WB_reg.sv RTL/Register/Register.sv 
 # ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
 # -- Compiling package ALU_sv_unit
@@ -62,27 +62,170 @@
 # Top level modules:
 # 	RISC_V_pipe_line
 # 	Mux_WB
-# End time: 03:16:34 on Jul 06,2026, Elapsed time: 0:00:00
+# End time: 21:08:56 on Jul 07,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
-# Start time: 03:16:34 on Jul 06,2026
-# vlog -reportprogress 300 -sv Benchmark/RISC_V_pipe_line_tb.sv 
+# Start time: 21:08:56 on Jul 07,2026
+# vlog -reportprogress 300 -sv Benchmark/RISC_V_pipe_line_benchmark.sv 
 # ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
-# -- Compiling module RISC_V_pipe_line_tb
+# -- Compiling module RISC_V_pipe_line_benchmark
 # 
 # Top level modules:
-# 	RISC_V_pipe_line_tb
-# End time: 03:16:34 on Jul 06,2026, Elapsed time: 0:00:00
+# 	RISC_V_pipe_line_benchmark
+# End time: 21:08:56 on Jul 07,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # ** Note: (vsim-220) 'modelsim.ini' is used as the ini file.
-# vsim -voptargs="+acc" work.RISC_V_pipe_line_tb 
-# Start time: 03:16:34 on Jul 06,2026
+# vsim -voptargs="+acc" work.RISC_V_pipe_line_benchmark 
+# Start time: 21:08:56 on Jul 07,2026
 # ** Note: (vsim-3812) Design is being optimized...
 # ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
 # ** Note: (vopt-220) 'modelsim.ini' is used as the ini file.
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# ** Warning: Benchmark/RISC_V_pipe_line_benchmark.sv(25): (vopt-2685) [TFMPC] - Too few port connections for 'dut'.  Expected 3, found 2.
+# ** Warning: Benchmark/RISC_V_pipe_line_benchmark.sv(25): (vopt-2718) [TFMPC] - Missing connection for port 'res'.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=3.
 # Loading sv_std.std
-# Loading work.RISC_V_pipe_line_tb(fast)
+# Loading work.RISC_V_pipe_line_benchmark(fast)
+# Loading work.pkg(fast)
+# Loading work.RISC_V_pipe_line_sv_unit(fast)
+# Loading work.RISC_V_pipe_line(fast)
+# Loading work.PC(fast)
+# Loading work.Branch_Target_Buffer(fast)
+# Loading work.IMEM(fast)
+# Loading work.IF_ID_reg(fast)
+# Loading work.Register(fast)
+# Loading work.ImmGen_sv_unit(fast)
+# Loading work.ImmGen(fast)
+# Loading work.Control_sv_unit(fast)
+# Loading work.Control(fast)
+# Loading work.ID_EX_reg(fast)
+# Loading work.MUX_2_1(fast)
+# Loading work.ALU_control_sv_unit(fast)
+# Loading work.ALU_control(fast)
+# Loading work.ALU_sv_unit(fast)
+# Loading work.ALU(fast)
+# Loading work.PC_next_sv_unit(fast)
+# Loading work.PC_next(fast)
+# Loading work.EX_MEM_reg(fast)
+# Loading work.DMEM(fast)
+# Loading work.MEM_WB_reg(fast)
+# Loading work.Hazard_Detection_Unit(fast)
+# Loading work.Forwarding_Unit(fast)
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# =========================================================
+#            STARTING BENCHMARK SIMULATION                 
+# =========================================================
+# IMEM : Benchmark/imem.hex
+# DMEM : Benchmark/dmem.hex
+# 
+# 
+# >>> [SUCCESS] REACHED END_LOOP: Program finished naturally.
+# 
+# =========================================================
+#                     BENCHMARK RESULTS                     
+# =========================================================
+# -- Throughput --------------------------------------------
+# Total Cycles        : 57305
+# Total Fetched        : 54704
+# Squashed (mispredict): 6824
+# Total Instructions   : 47880
+# IPC (Instr/Cycle)    : 0.8355
+# CPI (Cycle/Instr)    : 1.1968
+# 
+# -- Hazards -------------------------------------------------
+# Load-use Stall Cycles : 2601 (4.54% of total cycles)
+# 
+# -- Branch / Jump / BTB --------------------------------------
+# Branch+Jump Executed  : 10670
+# Mispredict Events     : 3412
+# Misprediction Rate    : 31.98%
+# BTB Hit Count         : 5561
+# BTB Hit Rate (/fetch) : 10.17%
+# 
+# -- Forwarding ------------------------------------------------
+# ForwardA active       : 14468 cycles (25.25%)
+# ForwardB active       : 2701 cycles (4.71%)
+# =========================================================
+# 
+# ** Note: $finish    : Benchmark/RISC_V_pipe_line_benchmark.sv(148)
+#    Time: 1146150 ns  Iteration: 0  Instance: /RISC_V_pipe_line_benchmark
+# 1
+# Break in Module RISC_V_pipe_line_benchmark at Benchmark/RISC_V_pipe_line_benchmark.sv line 148
+do run/run_benchmark.tcl
+# End time: 21:09:54 on Jul 07,2026, Elapsed time: 0:00:58
+# Errors: 0, Warnings: 3
+# Questa Altera Starter FPGA Edition-64 vmap 2025.2 Lib Mapping Utility 2025.05 May 31 2025
+# vmap work work 
+# ** Note: (vmap-220) 'modelsim.ini' is used as the ini file.
+# Modifying modelsim.ini
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 21:09:54 on Jul 07,2026
+# vlog -reportprogress 300 -sv RTL/Design/pkg.sv 
+# ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
+# -- Compiling package pkg
+# 
+# Top level modules:
+# 	--none--
+# End time: 21:09:54 on Jul 07,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 21:09:54 on Jul 07,2026
+# vlog -reportprogress 300 -sv RTL/ALU/ALU.sv RTL/ALU/ALU_control.sv RTL/BTB/Branch_Target_Buffer.sv RTL/CtrlUnit/Control.sv RTL/Design/RISC_V_pipe_line.sv RTL/Design/pkg.sv RTL/ImmGen/ImmGen.sv RTL/MUX/MUX_2_1.sv RTL/MUX/Mux_WB.sv RTL/Memory/DMEM.sv RTL/Memory/IMEM.sv RTL/PC/PC.sv RTL/PC/PC_next.sv RTL/Pipeline/EX_MEM_reg.sv RTL/Pipeline/Forwarding_Unit.sv RTL/Pipeline/Hazard_Detection_Unit.sv RTL/Pipeline/ID_EX_reg.sv RTL/Pipeline/IF_ID_reg.sv RTL/Pipeline/MEM_WB_reg.sv RTL/Register/Register.sv 
+# ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
+# -- Compiling package ALU_sv_unit
+# -- Importing package pkg
+# -- Compiling module ALU
+# -- Compiling package ALU_control_sv_unit
+# -- Compiling module ALU_control
+# -- Compiling module Branch_Target_Buffer
+# -- Compiling package Control_sv_unit
+# -- Compiling module Control
+# -- Compiling package RISC_V_pipe_line_sv_unit
+# -- Compiling module RISC_V_pipe_line
+# -- Compiling package pkg
+# -- Compiling package ImmGen_sv_unit
+# -- Compiling module ImmGen
+# -- Compiling module MUX_2_1
+# -- Compiling module Mux_WB
+# -- Compiling module DMEM
+# -- Compiling module IMEM
+# -- Compiling module PC
+# -- Compiling package PC_next_sv_unit
+# -- Compiling module PC_next
+# -- Compiling module EX_MEM_reg
+# -- Compiling module Forwarding_Unit
+# -- Compiling module Hazard_Detection_Unit
+# -- Compiling module ID_EX_reg
+# -- Compiling module IF_ID_reg
+# -- Compiling module MEM_WB_reg
+# -- Compiling module Register
+# 
+# Top level modules:
+# 	RISC_V_pipe_line
+# 	Mux_WB
+# End time: 21:09:54 on Jul 07,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 21:09:54 on Jul 07,2026
+# vlog -reportprogress 300 -sv Benchmark/RISC_V_pipe_line_benchmark.sv 
+# ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
+# -- Compiling module RISC_V_pipe_line_benchmark
+# 
+# Top level modules:
+# 	RISC_V_pipe_line_benchmark
+# End time: 21:09:54 on Jul 07,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ** Note: (vsim-220) 'modelsim.ini' is used as the ini file.
+# vsim -voptargs="+acc" work.RISC_V_pipe_line_benchmark 
+# Start time: 21:09:54 on Jul 07,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vopt-220) 'modelsim.ini' is used as the ini file.
+# ** Warning: Benchmark/RISC_V_pipe_line_benchmark.sv(25): (vopt-2685) [TFMPC] - Too few port connections for 'dut'.  Expected 3, found 2.
+# ** Warning: Benchmark/RISC_V_pipe_line_benchmark.sv(25): (vopt-2718) [TFMPC] - Missing connection for port 'res'.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=3.
+# Loading sv_std.std
+# Loading work.RISC_V_pipe_line_benchmark(fast)
 # Loading work.pkg(fast)
 # Loading work.RISC_V_pipe_line_sv_unit(fast)
 # Loading work.RISC_V_pipe_line(fast)
@@ -124,33 +267,175 @@
 #                     BENCHMARK RESULTS                     
 # =========================================================
 # -- Throughput --------------------------------------------
-# Total Cycles        : 340
-# Total Fetched        : 291
-# Squashed (mispredict): 12
-# Total Instructions   : 279
-# IPC (Instr/Cycle)    : 0.8206
-# CPI (Cycle/Instr)    : 1.2186
+# Total Cycles        : 57305
+# Total Fetched        : 54704
+# Squashed (mispredict): 6824
+# Total Instructions   : 47880
+# IPC (Instr/Cycle)    : 0.8355
+# CPI (Cycle/Instr)    : 1.1968
 # 
 # -- Hazards -------------------------------------------------
-# Load-use Stall Cycles : 49 (14.41% of total cycles)
+# Load-use Stall Cycles : 2601 (4.54% of total cycles)
 # 
 # -- Branch / Jump / BTB --------------------------------------
-# Branch+Jump Executed  : 14
-# Mispredict Events     : 6
-# Misprediction Rate    : 42.86%
-# BTB Hit Count         : 11
-# BTB Hit Rate (/fetch) : 3.78%
+# Branch+Jump Executed  : 10670
+# Mispredict Events     : 3412
+# Misprediction Rate    : 31.98%
+# BTB Hit Count         : 5561
+# BTB Hit Rate (/fetch) : 10.17%
 # 
 # -- Forwarding ------------------------------------------------
-# ForwardA active       : 156 cycles (45.88%)
-# ForwardB active       : 51 cycles (15.00%)
+# ForwardA active       : 14468 cycles (25.25%)
+# ForwardB active       : 2701 cycles (4.71%)
 # =========================================================
 # 
-# ** Note: $finish    : Benchmark/RISC_V_pipe_line_tb.sv(197)
-#    Time: 6850 ns  Iteration: 0  Instance: /RISC_V_pipe_line_tb
+# ** Note: $finish    : Benchmark/RISC_V_pipe_line_benchmark.sv(148)
+#    Time: 1146150 ns  Iteration: 0  Instance: /RISC_V_pipe_line_benchmark
 # 1
-# Break in Module RISC_V_pipe_line_tb at Benchmark/RISC_V_pipe_line_tb.sv line 197
+# Break in Module RISC_V_pipe_line_benchmark at Benchmark/RISC_V_pipe_line_benchmark.sv line 148
+do run/run_benchmark.tcl
+# End time: 21:11:00 on Jul 07,2026, Elapsed time: 0:01:06
+# Errors: 0, Warnings: 3
+# Questa Altera Starter FPGA Edition-64 vmap 2025.2 Lib Mapping Utility 2025.05 May 31 2025
+# vmap work work 
+# ** Note: (vmap-220) 'modelsim.ini' is used as the ini file.
+# Modifying modelsim.ini
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 21:11:00 on Jul 07,2026
+# vlog -reportprogress 300 -sv RTL/Design/pkg.sv 
+# ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
+# -- Compiling package pkg
+# 
+# Top level modules:
+# 	--none--
+# End time: 21:11:00 on Jul 07,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 21:11:00 on Jul 07,2026
+# vlog -reportprogress 300 -sv RTL/ALU/ALU.sv RTL/ALU/ALU_control.sv RTL/BTB/Branch_Target_Buffer.sv RTL/CtrlUnit/Control.sv RTL/Design/RISC_V_pipe_line.sv RTL/Design/pkg.sv RTL/ImmGen/ImmGen.sv RTL/MUX/MUX_2_1.sv RTL/MUX/Mux_WB.sv RTL/Memory/DMEM.sv RTL/Memory/IMEM.sv RTL/PC/PC.sv RTL/PC/PC_next.sv RTL/Pipeline/EX_MEM_reg.sv RTL/Pipeline/Forwarding_Unit.sv RTL/Pipeline/Hazard_Detection_Unit.sv RTL/Pipeline/ID_EX_reg.sv RTL/Pipeline/IF_ID_reg.sv RTL/Pipeline/MEM_WB_reg.sv RTL/Register/Register.sv 
+# ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
+# -- Compiling package ALU_sv_unit
+# -- Importing package pkg
+# -- Compiling module ALU
+# -- Compiling package ALU_control_sv_unit
+# -- Compiling module ALU_control
+# -- Compiling module Branch_Target_Buffer
+# -- Compiling package Control_sv_unit
+# -- Compiling module Control
+# -- Compiling package RISC_V_pipe_line_sv_unit
+# -- Compiling module RISC_V_pipe_line
+# -- Compiling package pkg
+# -- Compiling package ImmGen_sv_unit
+# -- Compiling module ImmGen
+# -- Compiling module MUX_2_1
+# -- Compiling module Mux_WB
+# -- Compiling module DMEM
+# -- Compiling module IMEM
+# -- Compiling module PC
+# -- Compiling package PC_next_sv_unit
+# -- Compiling module PC_next
+# -- Compiling module EX_MEM_reg
+# -- Compiling module Forwarding_Unit
+# -- Compiling module Hazard_Detection_Unit
+# -- Compiling module ID_EX_reg
+# -- Compiling module IF_ID_reg
+# -- Compiling module MEM_WB_reg
+# -- Compiling module Register
+# 
+# Top level modules:
+# 	RISC_V_pipe_line
+# 	Mux_WB
+# End time: 21:11:00 on Jul 07,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Questa Altera Starter FPGA Edition-64 vlog 2025.2 Compiler 2025.05 May 31 2025
+# Start time: 21:11:00 on Jul 07,2026
+# vlog -reportprogress 300 -sv Benchmark/RISC_V_pipe_line_benchmark.sv 
+# ** Note: (vlog-220) 'modelsim.ini' is used as the ini file.
+# -- Compiling module RISC_V_pipe_line_benchmark
+# 
+# Top level modules:
+# 	RISC_V_pipe_line_benchmark
+# End time: 21:11:00 on Jul 07,2026, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# ** Note: (vsim-220) 'modelsim.ini' is used as the ini file.
+# vsim -voptargs="+acc" work.RISC_V_pipe_line_benchmark 
+# Start time: 21:11:00 on Jul 07,2026
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10908) Some optimizations are turned off because the +acc switch is in effect.
+# ** Note: (vopt-220) 'modelsim.ini' is used as the ini file.
+# ** Warning: Benchmark/RISC_V_pipe_line_benchmark.sv(25): (vopt-2685) [TFMPC] - Too few port connections for 'dut'.  Expected 3, found 2.
+# ** Warning: Benchmark/RISC_V_pipe_line_benchmark.sv(25): (vopt-2718) [TFMPC] - Missing connection for port 'res'.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=3.
+# Loading sv_std.std
+# Loading work.RISC_V_pipe_line_benchmark(fast)
+# Loading work.pkg(fast)
+# Loading work.RISC_V_pipe_line_sv_unit(fast)
+# Loading work.RISC_V_pipe_line(fast)
+# Loading work.PC(fast)
+# Loading work.Branch_Target_Buffer(fast)
+# Loading work.IMEM(fast)
+# Loading work.IF_ID_reg(fast)
+# Loading work.Register(fast)
+# Loading work.ImmGen_sv_unit(fast)
+# Loading work.ImmGen(fast)
+# Loading work.Control_sv_unit(fast)
+# Loading work.Control(fast)
+# Loading work.ID_EX_reg(fast)
+# Loading work.MUX_2_1(fast)
+# Loading work.ALU_control_sv_unit(fast)
+# Loading work.ALU_control(fast)
+# Loading work.ALU_sv_unit(fast)
+# Loading work.ALU(fast)
+# Loading work.PC_next_sv_unit(fast)
+# Loading work.PC_next(fast)
+# Loading work.EX_MEM_reg(fast)
+# Loading work.DMEM(fast)
+# Loading work.MEM_WB_reg(fast)
+# Loading work.Hazard_Detection_Unit(fast)
+# Loading work.Forwarding_Unit(fast)
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# .main_pane.wave.interior.cs.body.pw.wf
+# =========================================================
+#            STARTING BENCHMARK SIMULATION                 
+# =========================================================
+# IMEM : Benchmark/imem.hex
+# DMEM : Benchmark/dmem.hex
+# 
+# 
+# >>> [SUCCESS] REACHED END_LOOP: Program finished naturally.
+# 
+# =========================================================
+#                     BENCHMARK RESULTS                     
+# =========================================================
+# -- Throughput --------------------------------------------
+# Total Cycles        : 57305
+# Total Fetched        : 54704
+# Squashed (mispredict): 6824
+# Total Instructions   : 47880
+# IPC (Instr/Cycle)    : 0.8355
+# CPI (Cycle/Instr)    : 1.1968
+# 
+# -- Hazards -------------------------------------------------
+# Load-use Stall Cycles : 2601 (4.54% of total cycles)
+# 
+# -- Branch / Jump / BTB --------------------------------------
+# Branch+Jump Executed  : 10670
+# Mispredict Events     : 3412
+# Misprediction Rate    : 31.98%
+# BTB Hit Count         : 5561
+# BTB Hit Rate (/fetch) : 10.17%
+# 
+# -- Forwarding ------------------------------------------------
+# ForwardA active       : 14468 cycles (25.25%)
+# ForwardB active       : 2701 cycles (4.71%)
+# =========================================================
+# 
+# ** Note: $finish    : Benchmark/RISC_V_pipe_line_benchmark.sv(148)
+#    Time: 1146150 ns  Iteration: 0  Instance: /RISC_V_pipe_line_benchmark
+# 1
+# Break in Module RISC_V_pipe_line_benchmark at Benchmark/RISC_V_pipe_line_benchmark.sv line 148
 # 0 ps
-# 7192500 ps
-# End time: 03:20:47 on Jul 06,2026, Elapsed time: 0:04:13
-# Errors: 0, Warnings: 1
+# 1203457500 ps
+# End time: 21:14:50 on Jul 07,2026, Elapsed time: 0:03:50
+# Errors: 0, Warnings: 3

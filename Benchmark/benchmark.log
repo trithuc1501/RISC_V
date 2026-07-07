@@ -1,0 +1,37 @@
+# =========================================================
+#            STARTING BENCHMARK SIMULATION                 
+# =========================================================
+# IMEM : Benchmark/imem.hex
+# DMEM : Benchmark/dmem.hex
+# 
+# 
+# >>> [SUCCESS] REACHED END_LOOP: Program finished naturally.
+# 
+# =========================================================
+#                     BENCHMARK RESULTS                     
+# =========================================================
+# -- Throughput --------------------------------------------
+# Total Cycles        : 57305
+# Total Fetched        : 54704
+# Squashed (mispredict): 6824
+# Total Instructions   : 47880
+# IPC (Instr/Cycle)    : 0.8355
+# CPI (Cycle/Instr)    : 1.1968
+# 
+# -- Hazards -------------------------------------------------
+# Load-use Stall Cycles : 2601 (4.54% of total cycles)
+# 
+# -- Branch / Jump / BTB --------------------------------------
+# Branch+Jump Executed  : 10670
+# Mispredict Events     : 3412
+# Misprediction Rate    : 31.98%
+# BTB Hit Count         : 5561
+# BTB Hit Rate (/fetch) : 10.17%
+# 
+# -- Forwarding ------------------------------------------------
+# ForwardA active       : 14468 cycles (25.25%)
+# ForwardB active       : 2701 cycles (4.71%)
+# =========================================================
+# 
+# ** Note: $finish    : Benchmark/RISC_V_pipe_line_tb.sv(148)
+#    Time: 1146150 ns  Iteration: 0  Instance: /RISC_V_pipe_line_tb
