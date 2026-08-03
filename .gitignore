@@ -3,3 +3,5 @@ riscv_pipeline.vcd
 work/
 transcript
 modelsim.ini
+transcript
+*.wlf

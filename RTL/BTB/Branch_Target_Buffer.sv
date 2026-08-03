@@ -1,5 +1,5 @@
 module Branch_Target_Buffer #(
-    parameter BTB_ENTRIES = 16 
+    parameter BTB_ENTRIES = 512 
 )(
     input logic clk,
     input logic rst_n,
@@ -13,13 +13,14 @@ module Branch_Target_Buffer #(
     input logic [63:0] EX_PC,
     input logic [63:0] EX_Target_Address
 );
-    
+    localparam INDEX_WIDTH = $clog2(BTB_ENTRIES);
+
     logic Valid_Array [0:BTB_ENTRIES-1];
     logic [63:0] Tag_Array [0:BTB_ENTRIES-1];
     logic [63:0] Target_Array [0:BTB_ENTRIES-1];
 
-    logic [3:0] Read_Index;
-    assign Read_Index = IF_PC[5:2];
+    logic [INDEX_WIDTH-1:0] Read_Index;
+    assign Read_Index = IF_PC[INDEX_WIDTH+1 : 2];
 
     always_comb begin
         BTB_Hit = 1'b0;
@@ -31,8 +32,8 @@ module Branch_Target_Buffer #(
         end
     end
 
-    logic [3:0] Write_Index;
-    assign Write_Index = EX_PC[5:2];
+    logic [INDEX_WIDTH-1:0] Write_Index;
+    assign Write_Index = EX_PC[INDEX_WIDTH+1 : 2];
 
     integer i;
     always_ff @(posedge clk or negedge rst_n) begin

@@ -6,11 +6,11 @@
 1 11 ALU_sv_unit 4 fast 58 /home/trithuc/Documents/tools/OpenLane/designs/RISC_V/work 0 0 0 131072 0 0
 1 15 PC_next_sv_unit 4 fast 58 /home/trithuc/Documents/tools/OpenLane/designs/RISC_V/work 0 0 0 131072 0 0
 1 2 PC 4 fast 58 /home/trithuc/Documents/tools/OpenLane/designs/RISC_V/work 0 0 0 0 35 0
-1 20 Branch_Target_Buffer 4 fast 58 /home/trithuc/Documents/tools/OpenLane/designs/RISC_V/work 0 0 0 0 127 0
+1 20 Branch_Target_Buffer 4 fast 58 /home/trithuc/Documents/tools/OpenLane/designs/RISC_V/work 0 0 0 0 150 0
 1 4 IMEM 4 fast 58 /home/trithuc/Documents/tools/OpenLane/designs/RISC_V/work 0 0 0 0 22 0
 1 9 IF_ID_reg 4 fast 58 /home/trithuc/Documents/tools/OpenLane/designs/RISC_V/work 0 0 0 0 48 0
-1 8 Register 4 fast 58 /home/trithuc/Documents/tools/OpenLane/designs/RISC_V/work 0 0 0 0 50 0
-1 6 ImmGen 4 fast 58 /home/trithuc/Documents/tools/OpenLane/designs/RISC_V/work 0 0 131072 131072 69 0
+1 8 Register 4 fast 58 /home/trithuc/Documents/tools/OpenLane/designs/RISC_V/work 0 0 131072 0 50 0
+1 6 ImmGen 4 fast 58 /home/trithuc/Documents/tools/OpenLane/designs/RISC_V/work 0 0 0 131072 69 0
 1 7 Control 4 fast 58 /home/trithuc/Documents/tools/OpenLane/designs/RISC_V/work 0 0 0 131072 32 0
 1 9 ID_EX_reg 4 fast 58 /home/trithuc/Documents/tools/OpenLane/designs/RISC_V/work 0 0 0 0 120 0
 1 7 MUX_2_1 4 fast 58 /home/trithuc/Documents/tools/OpenLane/designs/RISC_V/work 0 0 0 0 44 0
